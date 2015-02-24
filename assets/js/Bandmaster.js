@@ -1,32 +1,19 @@
 /*
  
- File: assign9script.js
- 91.461 GUI Programming 1, Assignment 9: Using AngularJS
- David Lordan, UMass Lowell Computer Science, david_lordan@student.uml.edu
- Alternate email: davidlordan@gmail.com
- Created on Dec 6th, 2014 11:30 AM, updated on Dec 10th, 2014 9:25 PM
- 
- This is the JavaScript file which contains many functions used to implement
- a band organization site. This particular example is used for the GoldBlood 
- reference page. 
  
  */
 
 
 
 //Global variables
-//  assing9 is the angular module for the entire page.
-var assign9 = angular.module('assign9', []);
+//  bandmaster is the angular module for the entire page.
+var bandmaster = angular.module('bandmaster', []);
 
 //AngularJS controller. 
-assign9.controller("assign9Ctrl", function ($scope, $http) {
+bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
 //Fetches the song list, stored in a JSON file, via AJAX
-    $http.get('GB_songs.json').success(function (data) {
-        $scope.myList = data;
-        // console.log("dude");
-    });
-
+    
     $scope.playing = false;
     $scope.playbackIcon = "assets/img/playIcon.png";
 
@@ -37,7 +24,7 @@ assign9.controller("assign9Ctrl", function ($scope, $http) {
     $scope.nowPlaying = "";
 
     //Default song list.
-    $scope.currentSongList = "GB_songs";
+    $scope.currentSongList = "songs";
 
     //Current time of a song and the time remaining.
     $scope.timeSpent = "";
@@ -47,7 +34,7 @@ assign9.controller("assign9Ctrl", function ($scope, $http) {
     $scope.updateActive = function (i) {
 
         //If the current list is a 'playable' list, the audio player is reset. 
-        if ($scope.currentSongList === "GB_ideas" || $scope.currentSongList === "GB_songs") {
+        if ( $scope.currentSongList === "songs") {
 
             //Pauses whatever song is playing, resetting the audio player. 
             $scope.nowPlaying = "";
@@ -78,7 +65,7 @@ assign9.controller("assign9Ctrl", function ($scope, $http) {
             }
         }
         //If the current list is the available notation, opens a new window with the appropriate pdf file. 
-        if ($scope.currentSongList === "GB_Notation") {
+        if ($scope.currentSongList === "Notation") {
             window.open("http://davidlordan.github.io/Goldblood_Reference/Resources/" + i.name + ".pdf");
         }
 
@@ -327,11 +314,11 @@ assign9.controller("assign9Ctrl", function ($scope, $http) {
     });
 
     //Fetches the song list, stored in a JSON file, via AJAX
-    $http.get('JSON/GB_songs.json').success(function (data) {
+    $http.get('JSON/songs.json').success(function (data) {
         $scope.myList = data;
 
         updateJSON = function () {
-            $http.get('JSON/GB_songs.json').success(function (data) {
+            $http.get('JSON/songs.json').success(function (data) {
                 $scope.myList = data;
             });
         };
@@ -342,6 +329,10 @@ assign9.controller("assign9Ctrl", function ($scope, $http) {
 
     });
 
+$http.get('JSON/taskList.json').success(function (data) {
+        $scope.taskList = data;
+
+    });
 
 
     var deleteFile = function (index, fileName) {
@@ -375,7 +366,7 @@ assign9.controller("assign9Ctrl", function ($scope, $http) {
 
 
 
-}); //End assign9.controller
+}); //End bandmaster.controller
 
 
 
@@ -384,7 +375,7 @@ assign9.controller("assign9Ctrl", function ($scope, $http) {
 //Custom filter for the song lengths. As these are not stored as strings, the colon
 // must be added manually. Its likely there is a built in angular filter to take care
 // of this, but I thought it would be good practice to create a pair of custom filters.
-assign9.filter("lengthFilter", function () {
+bandmaster.filter("lengthFilter", function () {
 
     return function (int) {
         //Simple algorithm to separate the length and add a colon in the appropriate location.
@@ -396,7 +387,7 @@ assign9.filter("lengthFilter", function () {
 });
 
 //Custom filter for the song names. 
-assign9.filter("audioFilter", function () {
+bandmaster.filter("audioFilter", function () {
 
     return function (i) {
 
@@ -407,7 +398,7 @@ assign9.filter("audioFilter", function () {
 // seconds, a short algorithm is used to calculate the total hours, minutes and remaining
 // seconds. Again, this soft of filter is likley to be bulit in to Angular, but it seemed
 // like a good thing to practice. 
-assign9.filter("timeFilter", function () {
+bandmaster.filter("timeFilter", function () {
     return function (time) {
 
 

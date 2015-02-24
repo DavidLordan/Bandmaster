@@ -53,6 +53,12 @@ table{
     border-color: white;
 }
 
+#toDoList{
+    border-style: solid;
+    border-color: white;
+    color: white;
+}
+
 .hubPane p{
     text-align: center;
     font-size: 1.2em;

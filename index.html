@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="assign9">
+<html ng-app="bandmaster">
     <head>
         <title>*Band Name* Hub</title>
         <meta charset="UTF-8">
@@ -23,11 +23,11 @@
         <script src="assets/js/jquery.ui.widget.js"></script>
         <script src="assets/js/jquery.fileupload.js"></script>
         <script src="assets/js/jquery.knob.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/uploadScript.js"></script>
 
         <!-- External Javascript file containing custom functions and the AngularJS 
              model and controller that allow the page to function.-->
-        <script src="assets/js/assign9script.js"></script>
+        <script src="assets/js/Bandmaster.js"></script>
 
         <!-- Link to CSS file used to stylize the page.-->
         <link href="assets/css/PKstyleV3.css" rel="stylesheet" type="text/css"> 
@@ -36,8 +36,8 @@
 
     </head>
 
-    <!-- Directive which says this page will use the assign9Ctrl ng-controller. -->
-    <body ng-controller="assign9Ctrl" ng-init='load()'>
+    <!-- Directive which says this page will use the bandmasterCtrl ng-controller. -->
+    <body ng-controller="bandmasterCtrl" ng-init='load()'>
 
         <!-- Bootstrap container for the entire body.-->
         <div class="container-fluid">
@@ -46,7 +46,7 @@
             <center><h1>Band Name</h1></center>
 
             <!-- Div that contains the list of songs. An ng-class is applied to the different song groupings. -->
-            <div class="col-md-4" id="setlist" ng-class="{ideas: currentSongList === 'GB_ideas'}">
+            <div class="col-md-4" id="setlist" >
 
 
                 <div><center><p style="color:white">#tabs</p></center></div>
@@ -63,7 +63,7 @@
                     </form>
                     <!-- As the download table has a third column, it is built separately and then hidden when
                          not in use. This should DEFINITELY be reimplemented with AJAX -->
-                    <table ng-class="{hidden: currentSongList === 'GB_Downloads'}">
+                    <table >
                         <!-- Table headers for the playlist songs names and lengths.-->
                         <tr>
                             <th class="numHeader">#</th>
@@ -124,7 +124,25 @@
 
             <div class="hubPane col-md-4">
                 <div><p style="color:white">#calender</p></div>
-                <div><p style="color:white">#todolist</p></div>
+                
+                
+                
+                <div id="toDoList"><p style="color:white">#todolist</p>
+                 <table>
+                        <!-- Table headers for the playlist songs names and lengths.-->
+                        
+
+                        <!-- Contains the song names and their index. -->
+
+
+                        <tr ng-repeat="i in taskList" >
+                            <td>{{i.task}}</td>
+                        </tr>
+
+                    </table><!-- End of play list table.-->
+                
+                
+                </div>
             </div>
 
         </div><!-- End wrapper -->

@@ -9,7 +9,7 @@ if (isset($_FILES['upl']) && $_FILES['upl']['error'] == 0) {
         echo '{"status":"success"}';
 
 
-        $file = file_get_contents('JSON/GB_songs.json', true);
+        $file = file_get_contents('JSON/songs.json', true);
         $data = json_decode($file, true);
         unset($file);
 
@@ -19,7 +19,7 @@ if (isset($_FILES['upl']) && $_FILES['upl']['error'] == 0) {
         $data[] = array('name' => $basename);
 
         $result = json_encode($data);
-        file_put_contents('JSON/GB_songs.json', $result);
+        file_put_contents('JSON/songs.json', $result);
         unset($result);
 
         exit;

@@ -71,7 +71,8 @@ table{
 }
 
 .hubPane tr:nth-child(2n-1) button{
-    background-color: rgba(255, 255, 255, 0);
+   // background-color: rgba(255, 255, 255, 0);
+    //background-color: green;
 }
 
 /* Overrides the default a tag rules, used for table headers. */
@@ -91,6 +92,7 @@ table{
 }
 #setlist tr:nth-child(2n-1) button{
     background-color: rgba(255, 255, 255, 0);
+    color:white;
 }
 .fin tr:nth-child(2n-1){
     background: rgb(180,221,180); /* Old browsers */

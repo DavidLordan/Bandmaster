@@ -2,17 +2,50 @@
 
 set_include_path('ChromePHP.php');
 
-$file = file_get_contents('JSON/songs.json', true);
-$data = json_decode($file, true);
-unset($file);
+if ($_POST['func'] == "deleteFile") {
 
-array_splice($data, $_POST['index'], 1);
+    $file = file_get_contents('JSON/songs.json', true);
+    $data = json_decode($file, true);
+    unset($file);
 
-$result = json_encode($data);
-file_put_contents('JSON/songs.json', $result);
-unset($result);
+    array_splice($data, $_POST['index'], 1);
 
-$fileToRemove = 'uploads/' . (string)$_POST['filename'];
-unlink($fileToRemove);
+    $result = json_encode($data);
+    file_put_contents('JSON/songs.json', $result);
+    unset($result);
 
-exit;
+    $fileToRemove = 'uploads/' . (string) $_POST['filename'];
+    unlink($fileToRemove);
+
+    exit;
+} else if ($_POST['func'] == "addTask") {
+
+    $file = file_get_contents('JSON/taskList.json', true);
+    $data = json_decode($file, true);
+    unset($file);
+
+    $newTask = $_POST['newTask'];
+    $data[] = array('task' => $newTask);
+
+    $result = json_encode($data);
+    file_put_contents('JSON/taskList.json', $result);
+    unset($result);
+
+    exit;
+}
+
+else if ($_POST['func'] == "deleteTask") {
+
+    $file = file_get_contents('JSON/taskList.json', true);
+    $data = json_decode($file, true);
+    unset($file);
+
+    array_splice($data, $_POST['index'], 1);
+
+    $result = json_encode($data);
+    file_put_contents('JSON/taskList.json', $result);
+    unset($result);
+
+    exit;
+    
+}

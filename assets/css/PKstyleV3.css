@@ -253,6 +253,10 @@ table{
     border-width: 2px;
 }
 
+.activeTaskClass, .activeTaskClass button{
+    border-style: solid;
+    border-color: #00ff00;
+}
 .numHeader{
     border-right-style: solid;
     border-right-color: white;
@@ -423,3 +427,27 @@ button{
     opacity: 0;
 }
 
+#newTaskBox{
+    color: white;
+}
+
+
+#newTaskButton{
+    color:black;
+}
+
+#newTaskBox{
+    padding: 20px;
+    border-style: solid;
+    border-color: white;
+}
+
+#newTaskBox input{
+    color: black;
+    margin: 10px;
+    width: 100%;
+}
+
+#toDoList, button{
+    background-color: #242B33;
+}

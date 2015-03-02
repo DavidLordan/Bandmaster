@@ -13,7 +13,7 @@ var bandmaster = angular.module('bandmaster', []);
 bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
 //Fetches the song list, stored in a JSON file, via AJAX
-    
+
     $scope.playing = false;
     $scope.playbackIcon = "assets/img/playIcon.png";
 
@@ -30,11 +30,18 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     $scope.timeSpent = "";
     $scope.timeRemaining = "";
 
+    $scope.updateActiveTask = function (i, taskObject) {
+        //alert(i);  
+        $scope.activeTask = taskObject.task;
+        $scope.activeTaskIndex = i;
+    };
+
+
     //Updates the active/playing song when clicked. 
     $scope.updateActive = function (i) {
 
         //If the current list is a 'playable' list, the audio player is reset. 
-        if ( $scope.currentSongList === "songs") {
+        if ($scope.currentSongList === "songs") {
 
             //Pauses whatever song is playing, resetting the audio player. 
             $scope.nowPlaying = "";
@@ -53,14 +60,14 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
                 bar.style.width = 0;
 
             }
-            //Updates the 'moveActive' object to be the song clicked. Also gets the song name
+            //Updates the 'activeSong' object to be the song clicked. Also gets the song name
             // and stores it in the audioActive object. 
-            if ($scope.moveActive !== i) {
-                $scope.moveActive = i;
-                $scope.audioActive = $scope.moveActive.name;
+            if ($scope.activeSong !== i) {
+                $scope.activeSong = i;
+                $scope.audioActive = $scope.activeSong.name;
             }
             else {
-                $scope.moveActive = "";
+                $scope.activeSong = "";
                 $scope.audioActive = "";
             }
         }
@@ -270,7 +277,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
         dragenter: function () {
             counter++;
             if (!droppingFile) {
-                console.log("this guy");
+                //console.log("this guy");
 
                 $("#green_circle").css({"-webkit-transform": "scale( 2 )",
                     "-moz-transform": "scale( 2 )",
@@ -321,29 +328,45 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
             $http.get('JSON/songs.json').success(function (data) {
                 $scope.myList = data;
             });
+            $http.get('JSON/taskList.json').success(function (data) {
+                $scope.taskList = data;
+            });
         };
 
         setInterval(function () {
             updateJSON();
-        }, 5000);
+        }, 500);
 
     });
 
-$http.get('JSON/taskList.json').success(function (data) {
+    $http.get('JSON/taskList.json').success(function (data) {
         $scope.taskList = data;
 
     });
-
-
-    var deleteFile = function (index, fileName) {
-        //console.log(fileName);
-        /// console.log(index + "!!!");
+    $scope.removeActiveTask = function () {
+       
+        //alert($scope.activeTaskIndex);
         $.ajax({
             type: 'POST',
             url: 'functions.php',
             data: {
+                func: "deleteTask",
+                index: $scope.activeTaskIndex
+            }
+        });
+
+
+    };
+
+    $scope.deleteFile = function (songObject, index) {
+
+        $.ajax({
+            type: 'POST',
+            url: 'functions.php',
+            data: {
+                func: "deleteFile",
                 index: index,
-                filename: fileName
+                filename: songObject.name
             }
         });
 

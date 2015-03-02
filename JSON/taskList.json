@@ -1,11 +1,1 @@
-[
-    {
-        "task": "Need to add calender image to test page to act as a placeholder."
-    }, {
-        "task": "Need to add edit and delete buttons for task list. "
-    }, {
-        "task": "We still need multiple tabs for the lists. "
-    }, {
-        "task": "Index template needs to be uploaded.  "
-    }
-]
+[{"task":"We still need multiple tabs for the lists. "},{"task":"Index template needs to be uploaded.  "},{"task":"CSS adjustments of task list. "},{"task":"Tasks should be editable. "}]

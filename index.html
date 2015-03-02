@@ -24,6 +24,7 @@
         <script src="assets/js/jquery.fileupload.js"></script>
         <script src="assets/js/jquery.knob.js"></script>
         <script src="assets/js/uploadScript.js"></script>
+        <script src="assets/js/dialog.js"></script>
 
         <!-- External Javascript file containing custom functions and the AngularJS 
              model and controller that allow the page to function.-->
@@ -33,6 +34,12 @@
         <link href="assets/css/PKstyleV3.css" rel="stylesheet" type="text/css"> 
         <!-- The main CSS file -->
         <link href="assets/css/style.css" rel="stylesheet" />
+
+
+
+
+
+
 
     </head>
 
@@ -78,7 +85,7 @@
                             <td class="songRow">
                                 <button ng-click="updateActive(i)">{{i.name}}</button>
                             </td>
-                            <td><button ng-click="showName(i, $index)">X</button></td>
+                            <td><button ng-click="deleteFile(i, $index)">X</button></td>
                             <td>
                                 <span ng-click="startDownload(i.name)" class="downloads glyphicon glyphicon-floppy-save" ></span> 
                             </td>
@@ -124,28 +131,42 @@
 
             <div class="hubPane col-md-4">
                 <div><p style="color:white">#calender</p></div>
-                
-                
-                
-                <div id="toDoList"><p style="color:white">#todolist</p>
-                 <table>
+
+
+
+                <div id="toDoList"><p style="color:white">To Do List</p>
+                    <table>
                         <!-- Table headers for the playlist songs names and lengths.-->
-                        
+
 
                         <!-- Contains the song names and their index. -->
 
 
-                        <tr ng-repeat="i in taskList" >
-                            <td>{{i.task}}</td>
+                        <tr ng-class="{activeTaskClass: i.task === activeTask}" ng-repeat="i in taskList" >
+                            <td> <button ng-click="updateActiveTask($index, i)">{{i.task}}</button></td>
                         </tr>
 
                     </table><!-- End of play list table.-->
-                
-                
+
+                    <div id="newTaskButton">
+                        <input type="button" onclick="showNewTaskBox()" value="New Task">
+                        <input type="button" ng-click="removeActiveTask()" value="Remove Active Task">
+                    </div>
                 </div>
+
+
+                <form id="newTaskBox" class="hidden">
+                    New Task: <input id="taskInput" type="text" name="NewTask" value=""><br>
+                    <input type="button" onclick="addTask()" value="Add Task">
+                    <input type="button" onclick="closeNewTaskBox()" value="Close">
+                </form>
             </div>
 
         </div><!-- End wrapper -->
+
+
+
+
 
     </body>
 

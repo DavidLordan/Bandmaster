@@ -1,9 +1,9 @@
 /*
- 
- 
+  Bandmaster.js
+
+  This file contains the AngularJS controller for
+  controlling the administrator page.  
  */
-
-
 
 //Global variables
 //  bandmaster is the angular module for the entire page.
@@ -12,10 +12,11 @@ var bandmaster = angular.module('bandmaster', []);
 //AngularJS controller. 
 bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
+console.log(username);
 //Fetches the song list, stored in a JSON file, via AJAX
 
     $scope.playing = false;
-    $scope.playbackIcon = "assets/img/playIcon.png";
+    $scope.playbackIcon = username + "/assets/img/playIcon.png";
 
     //audioActive is used to store the currenly selected song and its associated information.
     $scope.audioActive = "";
@@ -25,6 +26,9 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
     //Default song list.
     $scope.currentSongList = "songs";
+
+    //Variable to control the width of the upload progress bar. 
+    $scope.uploadProg = 0;
 
     //Current time of a song and the time remaining.
     $scope.timeSpent = "";
@@ -36,6 +40,24 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
         $scope.activeTaskIndex = i;
     };
 
+    //Updates the uploadProg variable and applies the change to the data model. 
+    $scope.updateProgress = function (up_Prog){
+
+        if($( "#mainProgBar" ).hasClass( "hidden" )){
+            $("#mainProgBar").removeClass("hidden");
+        }
+
+        if(up_Prog === 100){
+            
+            setTimeout(function(){
+                $("#mainProgBar").addClass("hidden");
+            }, 1000);
+            
+        }
+
+        $scope.uploadProg = up_Prog;
+        $scope.$apply();
+    }
 
     //Updates the active/playing song when clicked. 
     $scope.updateActive = function (i) {
@@ -46,7 +68,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
             //Pauses whatever song is playing, resetting the audio player. 
             $scope.nowPlaying = "";
             myAudio = document.getElementById('my-audio');
-            $scope.playbackIcon = "assets/img/playIcon.png";
+            $scope.playbackIcon = username + "/assets/img/playIcon.png";
             myAudio.pause();
             $scope.playing = false;
 
@@ -93,13 +115,13 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
             if ($scope.playing) {
                 $scope.playing = false;
-                $scope.playbackIcon = "assets/img/playIcon.png";
+                $scope.playbackIcon = username + "/assets/img/playIcon.png";
                 myAudio.pause();
             }
             else {
                 $scope.nowPlaying = "Playing: \"" + $scope.audioActive + ".mp3\"";
                 $scope.playing = true;
-                $scope.playbackIcon = "assets/img/pauseIcon.png";
+                $scope.playbackIcon = username + "/assets/img/pauseIcon.png";
                 myAudio.play();
             }
         }
@@ -110,7 +132,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
         $scope.currentSongList = listName;
         //Fetches the song list, stored in a JSON file, via AJAX
-        $http.get('JSON/' + listName + '.json').success(function (data) {
+        $http.get(username + '/JSON/' + listName + '.json').success(function (data) {
 
             $scope.myList = data;
         });
@@ -152,7 +174,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
         //When the song ends, the playhead is reset. Again, there should be a reset function in here. 
         myAudio.addEventListener("ended", function () {
-            $scope.playbackIcon = "assets/img/playIcon.png";
+            $scope.playbackIcon = username + "/assets/img/playIcon.png";
             $scope.nowPlaying = "";
             $scope.$apply();
             $scope.togglePlayback();
@@ -318,58 +340,132 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
                 "transform": "scale( 3 )",
                 "opacity": "0.0"});
         }
+    }); //end load()
+
+    // Fetch the song list, task list, and settings on page load
+    $http.get(username +'/JSON/songs.json').success(function (data) {
+      console.log("Fetching songs - first time");
+      $scope.myList = data;
+    });
+	  $http.get(username + '/JSON/taskList.json').success(function (data) {
+      console.log("Fetching tasks - first time");
+      $scope.taskList = data;
+    });
+    $http.get(username + '/JSON/settings.json').success(function (data) {
+      console.log("Fetching settings");
+      $scope.bandname = data.bandname;
     });
 
-    //Fetches the song list, stored in a JSON file, via AJAX
-    $http.get('JSON/songs.json').success(function (data) {
+    // updateJSON will update the songs and tasks from their respective json files
+    $scope.updateJSON = function() {
+      $http.get(username + '/JSON/songs.json').success(function (data) {
+        console.log("Updating songs in the UI");
         $scope.myList = data;
-
-        updateJSON = function () {
-            $http.get('JSON/songs.json').success(function (data) {
-                $scope.myList = data;
-            });
-            $http.get('JSON/taskList.json').success(function (data) {
-                $scope.taskList = data;
-            });
-        };
-
-        setInterval(function () {
-            updateJSON();
-        }, 500);
-
-    });
-
-    $http.get('JSON/taskList.json').success(function (data) {
+      });
+     $http.get(username + '/JSON/taskList.json').success(function (data) {
+        console.log("Updating tasks in the UI");
         $scope.taskList = data;
+      });
+    };
 
-    });
+    /*
+      changeName will change the bands name in the json file and update the UI
+    */
+    $scope.changeName = function() {
+      $("#changeNameBox").addClass("hidden");
+      $("#changeNameButton").removeClass("hidden");
+      $("#bandname").removeClass("hidden");
+
+      var str = $("#nameInput").val();
+
+      $.ajax({
+        type: 'POST',
+        url: username + '/functions.php',
+        data: {
+          func: "changeName",
+          name: str
+        },
+        success: function(res) {
+          console.log(res);
+          $scope.bandname = str;
+          $scope.$apply();
+        }
+      });
+    };
+
+    /*
+      addTask will add a new task. It will send the task to be added
+      to function.php which will append a new task to the taskList.json
+      array, and when it receives a response from the server it will 
+      update the UI
+    */
+    $scope.addTask = function() {
+      $("#newTaskBox").addClass("hidden");
+      $("#newTaskButton").removeClass("hidden");
+      var str = $("#taskInput").val();
+      if (str == '') {
+        console.log("cannot add empty task");
+        return;
+      }
+      $('#taskInput').val('');
+      console.log("adding " + str + " as a new task.")
+      $.ajax({
+        type: 'POST',
+        url: username + '/functions.php',
+        data: {
+          func: "addTask",
+          newTask: str
+        },
+        success: function(res) {
+          console.log(res);
+          $scope.taskList.push({task: str});
+          $scope.$apply();
+        }
+      });
+    };
+
+    /*
+      removeActiveTask will remove the currently selected task
+      and set the active task back to undefined.
+    */
     $scope.removeActiveTask = function () {
-       
-        //alert($scope.activeTaskIndex);
-        $.ajax({
-            type: 'POST',
-            url: 'functions.php',
-            data: {
-                func: "deleteTask",
-                index: $scope.activeTaskIndex
-            }
-        });
-
-
+      if (!$scope.activeTaskIndex) {
+        console.log("cannot remove undefined task");
+        return;
+      }
+      console.log("removing task #" + $scope.activeTaskIndex);
+      $.ajax({
+          type: 'POST',
+          url: username + '/functions.php',
+          data: {
+              func: "deleteTask",
+              index: $scope.activeTaskIndex
+          },
+          success: function(res) {
+            console.log(res);
+            $scope.taskList.splice($scope.activeTaskIndex, 1);
+            $scope.$apply();
+            $scope.activeTaskIndex = undefined;
+          }
+      });
     };
 
     $scope.deleteFile = function (songObject, index) {
-
-        $.ajax({
-            type: 'POST',
-            url: 'functions.php',
-            data: {
-                func: "deleteFile",
-                index: index,
-                filename: songObject.name
-            }
-        });
-
+      console.log("sending file delete request. file: " + index);
+      $.ajax({
+          type: 'POST',
+          url: username + '/functions.php',
+          data: {
+              func: "deleteFile",
+              index: index,
+              filename: songObject.name
+          },
+          success: function(res) {
+            console.log(res);
+            $scope.myList.splice(index, 1);
+            $scope.$apply();
+        }
+      });
     };
 
     $scope.showName = function (songObject, index) {
@@ -377,7 +473,6 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
         //console.log(index);
         deleteFile(index, songObject.name);
         console.log("worked?");
-
     };
 
 
@@ -414,7 +509,7 @@ bandmaster.filter("audioFilter", function () {
 
     return function (i) {
 
-        return "uploads/" + i;
+        return username + "/uploads/" + i;
     };
 });
 // Another custom filter that calulates the total time. As the total time is saved in

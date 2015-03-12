@@ -1,173 +1,87 @@
 <!DOCTYPE html>
-<html ng-app="bandmaster">
-    <head>
-        <title>*Band Name* Hub</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bandmaster</title>
+    <!--
+      index.html
 
-        <!-- Links to include bootstrap and jQuery. -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"/>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      This page serves as the entry-point for our web application where
+      users can create accounts or log into their existing account.
+    -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/frontstyle.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+  </head>
 
-        <!-- Link to load the AngularJS framework.-->
-        <script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js></script>
+  <body>
+    <!-- main div for the page, using bootstrap -->
+    <div id="main" class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Bandmaster</h1>
+        </div>
+      </div> <!-- end of header div -->
 
-        <!-- JavaScript Includes -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <div class="row">
+       <div class="col-md-4 col-md-offset-2">
+          <img src="instruments.jpg" class="img-responsive instruments">
+        </div>
+        <div class="col-md-4">
+          <p>
+            Welcome to Bandmaster!
+          </p>
+          <p>
+            We make musical collaboration easy!
+          </p>
+          <p>
+            Create an account below and login to start uploading music and adding tasks! 
+          </p>
+          <p>
+            Your username will determine your band's page eg: /bandmaster/your-user-name
+          </p>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+          <h3>Create an account</h3>
+          <form id="create" method="post" action="create.php">
+            <ul>
+              <li>
+                <label>Username</label>
+                <input type="text" tabindex="1" placeholder="Enter a Username" name="username" id="create_username" required>
+              </li>
+              <li>
+                <label>Password</label>
+                <input type="password" tabindex="2" name="password" id="create_password" required>
+              </li>
+              <input type="submit" class="submit">
+            </ul>
+          </form>
+        </div> <!-- end of create div-->
+        <div class="col-md-4">
+          <h3>Log In</h3>
+          <form id="login" method="post" action="admin.php">
+            <ul>
+              <li>
+                <label>Username</label>
+                <input type="text" tabindex="3" placeholder="Enter your Username" name="username" id="login_username" required>
+              </li>
+              <li>
+                <label>Password</label>
+                <input type="password" tabindex="4" name="password" id="login_password" required>
+              </li>
+              <input type="submit" class="submit">
+          </ul>
+          </form>
+        </div> <!-- end of login div -->
+      </div> <!-- end of row -->
 
-        <!-- jQuery File Upload Dependencies -->
-        <script src="assets/js/jquery.ui.widget.js"></script>
-        <script src="assets/js/jquery.fileupload.js"></script>
-        <script src="assets/js/jquery.knob.js"></script>
-        <script src="assets/js/uploadScript.js"></script>
-        <script src="assets/js/dialog.js"></script>
-
-        <!-- External Javascript file containing custom functions and the AngularJS 
-             model and controller that allow the page to function.-->
-        <script src="assets/js/Bandmaster.js"></script>
-
-        <!-- Link to CSS file used to stylize the page.-->
-        <link href="assets/css/PKstyleV3.css" rel="stylesheet" type="text/css"> 
-        <!-- The main CSS file -->
-        <link href="assets/css/style.css" rel="stylesheet" />
-
-
-
-
-
-
-
-    </head>
-
-    <!-- Directive which says this page will use the bandmasterCtrl ng-controller. -->
-    <body ng-controller="bandmasterCtrl" ng-init='load()'>
-
-        <!-- Bootstrap container for the entire body.-->
-        <div class="container-fluid">
-
-            <!-- band name will be based off of json data.-->
-            <center><h1>Band Name</h1></center>
-
-            <!-- Div that contains the list of songs. An ng-class is applied to the different song groupings. -->
-            <div class="col-md-4" id="setlist" >
-
-
-                <div><center><p style="color:white">#tabs</p></center></div>
-                <!-- A container for the actual list of songs. -->
-
-                <div id="tableDiv">
-                    <form id="upload" method="post" action="upload.php"  enctype="multipart/form-data">
-                        <div id="drop">
-                            Drop
-                            <div id="green_circle"></div>
-                            <a>Browse</a>
-                            <input type="file" name="upl" multiple />
-                        </div>
-                    </form>
-                    <!-- As the download table has a third column, it is built separately and then hidden when
-                         not in use. This should DEFINITELY be reimplemented with AJAX -->
-                    <table >
-                        <!-- Table headers for the playlist songs names and lengths.-->
-                        <tr>
-                            <th class="numHeader">#</th>
-                            <th class="songHeader">{{tableName}}</th>
-                        </tr>
-
-                        <!-- Contains the song names and their index. -->
-
-
-                        <tr ng-class="{move: i.name === audioActive}" ng-repeat="i in myList" >
-                            <td>{{$index + 1}}</td>
-                            <td class="songRow">
-                                <button ng-click="updateActive(i)">{{i.name}}</button>
-                            </td>
-                            <td><button ng-click="deleteFile(i, $index)">X</button></td>
-                            <td>
-                                <span ng-click="startDownload(i.name)" class="downloads glyphicon glyphicon-floppy-save" ></span> 
-                            </td>
-                        </tr>
-
-                    </table><!-- End of play list table.-->
-
-                </div>
-
-            </div><!-- End left pane-->
-            <!-- Container for the audio player. This includes the progress bar, play-head, song name and time.-->
-
-            <div class="hubPane col-md-4">
-                <div id="interaction">
-                    <audio id="my-audio" ng-src="{{audioActive|audioFilter}}"></audio>
-
-                    <div id="controls">
-                        <!-- custom play and pause buttons -->
-                        <input type="image" ng-src="{{playbackIcon}}" alt="UP" ng-click="togglePlayback()"/>
-
-                        <div id="nowPlaying"><span>&nbsp;{{nowPlaying}}&nbsp;</span></div>
-                        <div id="time">
-
-                            <span id="timeSpent">{{timeSpent| number:0|timeFilter}}</span>
-                            <span id="timeRemaining">-{{timeRemaining| number:0 |timeFilter}}</span>
-
-                        </div>
-                    </div>
-
-                    <div id="progress">
-                        <span id="circle2"></span>
-                        <span id="bar"></span>
-                        <span id="circle1"></span>
-                    </div><!-- End progress bar-->
-
-
-                </div><!-- End interaction div-->
-
-
-
-                <div><p style="color:white">#currently playing downloads</p></div>
-            </div>
-
-            <div class="hubPane col-md-4">
-                <div><p style="color:white">#calender</p></div>
-
-
-
-                <div id="toDoList"><p style="color:white">To Do List</p>
-                    <table>
-                        <!-- Table headers for the playlist songs names and lengths.-->
-
-
-                        <!-- Contains the song names and their index. -->
-
-
-                        <tr ng-class="{activeTaskClass: i.task === activeTask}" ng-repeat="i in taskList" >
-                            <td> <button ng-click="updateActiveTask($index, i)">{{i.task}}</button></td>
-                        </tr>
-
-                    </table><!-- End of play list table.-->
-
-                    <div id="newTaskButton">
-                        <input type="button" onclick="showNewTaskBox()" value="New Task">
-                        <input type="button" ng-click="removeActiveTask()" value="Remove Active Task">
-                    </div>
-                </div>
-
-
-                <form id="newTaskBox" class="hidden">
-                    New Task: <input id="taskInput" type="text" name="NewTask" value=""><br>
-                    <input type="button" onclick="addTask()" value="Add Task">
-                    <input type="button" onclick="closeNewTaskBox()" value="Close">
-                </form>
-            </div>
-
-        </div><!-- End wrapper -->
-
-
-
-
-
-    </body>
-
+    </div> <!-- end of main div -->
+  </body>
 </html>

@@ -1,3 +1,13 @@
+/*
+  uploadScript.js
+
+  This file contains the code used to upload songs and
+  other files through the administrator page. It utilizes
+  a jQuery plugin called drop zone that allows users to
+  drag and drop files onto a DOM element and the file
+  will be uploaded to the server.
+*/
+
 $(function () {
 
     var ul = $('#upload ul');
@@ -42,13 +52,25 @@ $(function () {
 
             });
 
+            console.log("Beginning file upload");
             // Automatically upload the file once it is added to the queue
-            var jqXHR = data.submit();
+            var jqXHR = data.submit().done(function(res) {
+              console.log(res);
+              var scope = angular.element(document.getElementById("mainbody")).scope();
+              scope.myList.push({name: data.files[0].name});
+              scope.$apply();
+            });
         },
         progress: function (e, data) {
 
             // Calculate the completion percentage of the upload
             var progress = parseInt(data.loaded / data.total * 100, 10);
+
+             //Grabs the main html body's angular scope. 
+            var scope = angular.element(document.getElementById("mainbody")).scope();
+
+            //Sends a progress update to the angular scope. 
+            scope.updateProgress(progress);
 
             // Update the hidden input field and trigger a change
             // so that the jQuery knob plugin knows to update the dial

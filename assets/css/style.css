@@ -1,4 +1,9 @@
+/*
+  style.css
 
+  This file is used to style the drop zone file
+  upload form.
+*/
 
 #fileTable td{
     border-style: solid;
@@ -132,6 +137,5 @@
 #upload ul li.error p{
     color:red;
 }
-
 
 

@@ -3,6 +3,9 @@
 
   This file is used to style the drop zone file
   upload form.
+  
+  Much of this file was taken diretly from a dropzone.js live demo. 
+  When the project style is re-built much of this file is likely to be removed. 
 */
 
 #fileTable td{

@@ -3,13 +3,14 @@ GUI Programming 2 Team Project - Spring 2015
 
 
 
-<h2>Welcome to Bandmaster!</h2>
+<h3>Welcome to Bandmaster!</h3>
 
 The purpose of Bandmaster is to allow musicians to collaborate with each other easily. Bandmaster
 provides a means by which artists can upload and share their recordings, transcriptions, events, and
 tasks. This is NOT intended to be used for band promotion, but is rather meant to give everyone involved in a
 project convenient access to the same content. 
 
+<h4>File Structure</h4>
 Within the assests folder there are subdirectories for CSS, images, and JavaScript. The CSS folder contains styling for the 
 admin, public, and login pages. 
 

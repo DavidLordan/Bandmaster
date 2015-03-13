@@ -20,8 +20,7 @@ The JavaScript folder contains Bandmaster.js, our main JavaSript file for the en
 and display the to-do list. This folder also contains our jQuery dependencies. 
 
 The templates folder contains all files which are to be copied over to user accounts. This includes JSON files which are used to
-store user data, such as their personal settings, list of songs, and their task list.
+store user data, such as their personal settings, list of songs, and their task list.The templates folder also contains the same assets folder mentioned above, though with only the Bandmaster.js file in the JavaScript subdirectory. Additionally there are PHP files used for the uploading and removing of files and tasks. 
 
-The templates folder also contains the same assets folder mentioned above, though with only the Bandmaster.js file in the JavaScript subdirectory. 
 
-Additionally there are PHP files used for the uploading and removing of files and tasks. 
+The php files in the repository's root directory are used for account creation, authentication, and login. Admin.php is used to control the entire admin page experience.

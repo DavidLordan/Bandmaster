@@ -5,7 +5,7 @@ GUI Programming 2 Team Project - Spring 2015
 
 <h3>Welcome to Bandmaster!</h3>
 
-The purpose of Bandmaster is to allow musicians to collaborate with each other easily. Bandmaster
+The purpose of Bandmaster is to allow musicians to easily collaborate with each other. Bandmaster
 provides a means by which artists can upload and share their recordings, transcriptions, events, and
 tasks. This is NOT intended to be used for band promotion, but is rather meant to give everyone involved in a
 project convenient access to the same content. 

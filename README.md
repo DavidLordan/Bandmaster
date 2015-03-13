@@ -1,5 +1,5 @@
 # Bandmaster
-GUI Programming 2 Team Project - Spring 2015
+GUI Programming 2 Team Project - Spring 2015 - David Lordan, Dean Marsinelli, Paul Karcher
 
 
 

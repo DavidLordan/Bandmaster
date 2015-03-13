@@ -6,6 +6,9 @@
   a jQuery plugin called drop zone that allows users to
   drag and drop files onto a DOM element and the file
   will be uploaded to the server.
+  
+  This is largely copied from a dropzone.js live demo and should be credited
+  to the dropzone.js dev team. 
 */
 
 $(function () {

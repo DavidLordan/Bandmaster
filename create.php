@@ -5,7 +5,7 @@
   /*
     createUser will create a new user account in the server
   */
-  function createUser($username, $password, $data) {
+  function createUser($username, $password) {
 
     // salt the password
     $password = "dB9" . $password . "87Xa";
@@ -82,8 +82,8 @@
     $newdir = $path . "/assets/css";
     mkdir($newdir);
     fwrite($log, date("m/d/Y @ g:i:sA") . " - creating directory: " . $newdir . "\n");
-    copy("./templates/assets/css/PKstyleV3.css", $path . "/assets/css/PKstyleV3.css");
-    fwrite($log, date("m/d/Y @ g:i:sA") . " - copying ./templates/assets/css/PKstyleV3.css to: " . $path . "/assets/css/PKstyleV3.css\n");
+    copy("./templates/assets/css/style.css", $path . "/assets/css/style.css");
+    fwrite($log, date("m/d/Y @ g:i:sA") . " - copying ./templates/assets/css/style.css to: " . $path . "/assets/css/style.css\n");
     // ASSETS/IMG
     $newdir = $path . "/assets/img";
     mkdir($newdir);
@@ -94,6 +94,7 @@
     copy("./templates/assets/img/icons.png", $path . "/assets/img/icons.png");
     copy("./templates/assets/img/downArrow.png", $path . "/assets/img/downArrow.png");
     copy("./templates/assets/img/border-image.png", $path . "/assets/img/border-image.png");
+    copy("./templates/assets/img/notepad.png", $path . "/assets/img/notepad.png");
     fwrite($log, date("m/d/Y @ g:i:sA") . " - copying images to: " . $path . "/assets/img");
 
     

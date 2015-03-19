@@ -19,7 +19,7 @@
       return false;
     }
     // if passwords match, return true
-    else if ($users[$index][password] == $pw) {
+    else if ($users[$index]['password'] == $pw) {
       return true;
     }
 

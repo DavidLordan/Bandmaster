@@ -12,10 +12,10 @@
     else {
       $mid = (int)($min + ($max - $min) / 2);
 
-      if ($users[$mid][username] > $name) {
+      if ($users[$mid]['username'] > $name) {
         return searchUser($users, $name, $min, $mid - 1);
       }
-      else if ($users[$mid][username] < $name) {
+      else if ($users[$mid]['username'] < $name) {
         return searchUser($users, $name, $mid + 1, $max);
       }
       else {

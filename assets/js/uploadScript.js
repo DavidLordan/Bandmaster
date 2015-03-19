@@ -6,9 +6,6 @@
   a jQuery plugin called drop zone that allows users to
   drag and drop files onto a DOM element and the file
   will be uploaded to the server.
-  
-  This is largely copied from a dropzone.js live demo and should be credited
-  to the dropzone.js dev team. 
 */
 
 $(function () {
@@ -18,7 +15,7 @@ $(function () {
     $('#drop a').click(function () {
         // Simulate a click on the file input button
         // to show the file browser dialog
-        $(this).parent().find('input').click();
+        $(this).parent().parent().find('input').click();
     });
 
     // Initialize the jQuery File Upload plugin
@@ -28,6 +25,7 @@ $(function () {
         // This function is called when a file is added to the queue;
         // either via the browse button, or via drag/drop:
         add: function (e, data) {
+            $("#uploadMessage").remove();
 
             var tpl = $('<li class="working"><input type="text" value="0" data-width="48" data-height="48"' +
                     ' data-fgColor="#0788a5" data-readOnly="1" data-bgColor="#3e4043" /><p></p><span></span></li>');
@@ -54,14 +52,66 @@ $(function () {
                 });
 
             });
+            var filename = data.files[0].name;
+            var ext = filename.substr(filename.length - 3);
+            var val = $("#uploadSelect").val();
 
-            console.log("Beginning file upload");
+            // prevent unsupported files
+            if (val == "song" && ext != "mp3") {
+              $("#uploadType").append("<p id='uploadMessage' style='color: red;'>Song files must be MP3</p>");
+              return;
+            }
+            else if (val != "song" && ext != "pdf") {
+              $("#uploadType").append("<p id='uploadMessage' style='color: red;'>File must be PDF</p>");
+              return;
+            }
+            // make sure a song is selected if they aren't upload a song
+            if (val != "song") {
+              //Grabs the main html body's angular scope. 
+              var scope = angular.element(document.getElementById("mainbody")).scope();
+              if (scope.activeSong == undefined || scope.activeSong == "") {
+                $("#uploadType").append("<p id='uploadMessage' style='color: red;'>Must select a Song</p>");
+                return;
+              }
+
+              var name = scope.activeSong.name;
+              //data.post['name'] = name;
+            }
+
+            console.log("Beginning file upload: " + data.files[0].name);
+            
             // Automatically upload the file once it is added to the queue
             var jqXHR = data.submit().done(function(res) {
               console.log(res);
-              var scope = angular.element(document.getElementById("mainbody")).scope();
-              scope.myList.push({name: data.files[0].name});
-              scope.$apply();
+              $("#green_circle").removeAttr('style');
+
+              // if success, add song to angular model
+              if (res == "songSuccess") {
+                $("#uploadType").append("<p id='uploadMessage' style='color: green;'>Song uploaded successfully</p>");
+                var scope = angular.element(document.getElementById("mainbody")).scope();
+                scope.myList.push({name: data.files[0].name});
+                scope.$apply();
+                // remove success message after 5 seconds
+                setTimeout(function(){
+                  $("#uploadMessage").remove();; 
+                }, 5000);
+              }
+              else if (res == "fileSuccess") {
+                $("#uploadType").append("<p id='uploadMessage' style='color: green;'>File added successfully</p>");
+                var scope = angular.element(document.getElementById("mainbody")).scope();
+                scope.updateJSON();
+                // remove success message after 5 seconds
+                setTimeout(function(){
+                  $("#uploadMessage").remove();; 
+                }, 5000);
+              }
+              // if failed -- say why
+              else if (res == "fileTooLarge") {
+                $("#uploadType").append("<p id='uploadMessage' style='color: red;'>File was too large to upload</p>");
+              }
+              else if (res == "error") {
+                $("#uploadType").append("<p id='uploadMessage' style='color: red;'>Error Uploading - try again</p>");
+              }
             });
         },
         progress: function (e, data) {
@@ -69,7 +119,7 @@ $(function () {
             // Calculate the completion percentage of the upload
             var progress = parseInt(data.loaded / data.total * 100, 10);
 
-             //Grabs the main html body's angular scope. 
+            //Grabs the main html body's angular scope. 
             var scope = angular.element(document.getElementById("mainbody")).scope();
 
             //Sends a progress update to the angular scope. 

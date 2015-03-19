@@ -21,13 +21,18 @@ var closeNewTaskBox = function () {
 // reveals the change name input field
 var showChangeName = function() {
   $("#changeNameBox").removeClass("hidden");
-  $("#changeNameButton").addClass("hidden");
   $("#bandname").addClass("hidden");
 };
 
 // closes the change name input field
 var closeChangeName = function() {
   $("#changeNameBox").addClass("hidden");
-  $("#changeNameButton").removeClass("hidden");
   $("#bandname").removeClass("hidden");
 };
+
+// click handler for band name
+$(document).ready(function() {
+  $("#bandname").click(function() {
+    showChangeName();
+  });
+});

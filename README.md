@@ -10,6 +10,12 @@ provides a means by which artists can upload and share their recordings, transcr
 tasks. This is NOT intended to be used for band promotion, but is rather meant to give everyone involved in a
 project convenient access to the same content. 
 
+<h4> Live demos: </h4>
+<p>Beta: http://www.daves-data.com/BandMaster_beta/BM_login.html</p>
+<p>These are both still very much works in progress. The beta is being updated and tested daily, so please do not
+	 be suprised if it is particularly unstable. Enjoy!</p>
+
+
 <h4>File Structure</h4>
 Within the assests folder there are subdirectories for CSS, images, and JavaScript. The CSS folder contains styling for the 
 admin, public, and login pages. 

@@ -12,7 +12,7 @@ project convenient access to the same content.
 
 <h4> Live demos: </h4>
 <p>Alpha: http://www.daves-data.com/Bandmaster/ </p>
-<p>Beta: http://www.daves-data.com/BandMaster_beta/BM_login.html</p>
+<p>Beta: http://www.daves-data.com/BandMaster_beta</p>
 <p>These are both still very much works in progress. The beta is being updated and tested daily, so please do not
 	 be suprised if it is particularly unstable. Enjoy!</p>
 

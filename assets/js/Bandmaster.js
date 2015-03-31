@@ -8,12 +8,17 @@
 //  Global variables
 //  bandmaster is the angular module for the entire page.
 var bandmaster = angular.module('bandmaster', []);
+var path = "default_localpath";
+var globalpath = "";
+
 
 //AngularJS controller. 
-bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
+bandmaster.controller("bandmasterCtrl", function ($scope, $http, $window) {
+  $scope.path = $window.thisPath;
 
   $scope.playing = false;
-  $scope.playbackIcon = username + "/assets/img/playIcon.png";
+  //$scope.playbackIcon = globalpath + "assets/img/playIcon.png";
+  
 
   //audioActive is used to store the currenly selected song and its associated information.
   $scope.audioActive = "";
@@ -73,7 +78,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
       //Pauses whatever song is playing, resetting the audio player. 
       $scope.nowPlaying = "";
       myAudio = document.getElementById('my-audio');
-      $scope.playbackIcon = username + "/assets/img/playIcon.png";
+      $scope.playbackIcon = globalpath + "assets/img/playIcon.png";
       myAudio.pause();
       $scope.playing = false;
 
@@ -118,15 +123,15 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     $("#infoPanel").append("<div id='songInfo'>");
     $("#songInfo").append("<h1>" + i.name + "</h1>");
     $("#songInfo").append("<table id='infoTable'>");
-    $("#infoTable").append("<tr><td>Song File</td><td><a href='" + username + "/uploads/" + songname + "' target='_blank'>Download</a></td></tr>");
+    $("#infoTable").append("<tr><td>Song File</td><td><a href='" + path + "uploads/" + songname + "' target='_blank'>Download</a></td></tr>");
     if (lyrics != undefined) {
-      $("#infoTable").append("<tr><td>Lyrics</td><td><a href='" + username + "/uploads/" + lyrics + "' target='_blank'>Download</a></td></tr>");
+      $("#infoTable").append("<tr><td>Lyrics</td><td><a href='" + path + "uploads/" + lyrics + "' target='_blank'>Download</a></td></tr>");
     }
     if (sheetmusic != undefined) {
-      $("#infoTable").append("<tr><td>Sheet Music</td><td><a href='" + username + "/uploads/" + sheetmusic + "' target='_blank'>Download</a></td></tr>");
+      $("#infoTable").append("<tr><td>Sheet Music</td><td><a href='" + path + "uploads/" + sheetmusic + "' target='_blank'>Download</a></td></tr>");
     } 
     if (guitartabs != undefined) {
-      $("#infoTable").append("<tr><td>Guitar Tabs</td><td><a href='" + username + "/uploads/" + guitartabs + "' target='_blank'>Download</a></td></tr>");
+      $("#infoTable").append("<tr><td>Guitar Tabs</td><td><a href='" + path + "uploads/" + guitartabs + "' target='_blank'>Download</a></td></tr>");
     }
     // update the invisible input field for file upload
     $("#invisibleName").attr("value", songname);
@@ -145,13 +150,13 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     if ($scope.audioActive !== "") {
       if ($scope.playing) {
         $scope.playing = false;
-        $scope.playbackIcon = username + "/assets/img/playIcon.png";
+        $scope.playbackIcon = globalpath + "assets/img/playIcon.png";
         myAudio.pause();
       }
       else {
         $scope.nowPlaying = "Playing: \"" + $scope.audioActive + "\"";
         $scope.playing = true;
-        $scope.playbackIcon = username + "/assets/img/pauseIcon.png";
+        $scope.playbackIcon = globalpath + "assets/img/pauseIcon.png";
         myAudio.play();
       }
     }
@@ -162,7 +167,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     $scope.currentSongList = listName;
 
     //Fetches the song list, stored in a JSON file, via AJAX
-    $http.get(username + '/JSON/' + listName + '.json').success(function (data) {
+    $http.get(path + '/JSON/' + listName + '.json').success(function (data) {
       $scope.myList = data;
     });
   };
@@ -194,15 +199,39 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     load is called when the body of the page is loaded. 
     It will initialize and maintain the progress bar
   */
-  $scope.load = function () {
+  $scope.load = function (client, userName) {
+
+   console.log(client);
+   // console.log(userName);
+    if(client==='admin'){
+      path = 'users/' + userName + '/';
+      globalpath = "";
+    } else if (client === 'public'){
+      path = $scope.path;
+
+      path = path.substring(17, path.length-1);
+
+      console.log("modified path:" + path);
+      path ="";
+      globalpath = "../../";
+
+
+
+    }
+    
+    console.log("path is:" + path);
+
     var progress = document.getElementById('progress');
     var myAudio = document.getElementById('my-audio');
     var bar = document.getElementById('bar');
     var playheadClicked = false;
+    $scope.playbackIcon = globalpath + "assets/img/playIcon.png";
+    console.log(globalpath + "assets/img/playIcon.png");
 
     //When the song ends, the playhead is reset. Again, there should be a reset function in here. 
     myAudio.addEventListener("ended", function () {
-      $scope.playbackIcon = username + "/assets/img/playIcon.png";
+      $scope.playbackIcon = globalpath + "assets/img/playIcon.png";
+      
       $scope.nowPlaying = "";
       $scope.$apply();
       $scope.togglePlayback();
@@ -297,6 +326,21 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
         }
       });
     }
+ 
+    // Fetch the song list, task list, and settings on page load
+    $http.get( path +'JSON/songs.json').success(function (data) {
+      console.log("Fetching songs - first time");
+      $scope.myList = data;
+    });
+    $http.get( path + 'JSON/taskList.json').success(function (data) {
+      console.log("Fetching tasks - first time");
+      $scope.taskList = data;
+    });
+    $http.get( path + 'JSON/settings.json').success(function (data) {
+      console.log("Fetching settings");
+      $scope.bandname = data.bandname;
+    });
+
   }; // end load()
 
   //Allows for the toggling of playback using the space bar.
@@ -362,23 +406,9 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     }
   }); 
 
-  // Fetch the song list, task list, and settings on page load
-  $http.get(username +'/JSON/songs.json').success(function (data) {
-    console.log("Fetching songs - first time");
-    $scope.myList = data;
-  });
-  $http.get(username + '/JSON/taskList.json').success(function (data) {
-    console.log("Fetching tasks - first time");
-    $scope.taskList = data;
-  });
-  $http.get(username + '/JSON/settings.json').success(function (data) {
-    console.log("Fetching settings");
-    $scope.bandname = data.bandname;
-  });
-
   // updateJSON will update the songs and tasks from their respective json files
   $scope.updateJSON = function() {
-    $http.get(username + '/JSON/songs.json').success(function (data) {
+    $http.get("users/" + path + '/JSON/songs.json').success(function (data) {
       $scope.myList = data;
       console.log($scope.myList.length);
       for (var j = 0; j < $scope.myList.length; j++) {
@@ -388,7 +418,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
       }
       $scope.updateInfoPanel($scope.activeSong);
     });
-   $http.get(username + '/JSON/taskList.json').success(function (data) {
+   $http.get("users/" + path + '/JSON/taskList.json').success(function (data) {
       $scope.taskList = data;
     });
 
@@ -406,7 +436,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
 
     $.ajax({
       type: 'POST',
-      url: username + '/functions.php',
+      url: path + 'functions.php',
       data: {
         func: "changeName",
         name: str
@@ -437,7 +467,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     console.log("adding " + str + " as a new task.")
     $.ajax({
       type: 'POST',
-      url: username + '/functions.php',
+      url: path + 'functions.php',
       data: {
         func: "addTask",
         newTask: str
@@ -462,7 +492,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     console.log("removing task #" + $scope.activeTaskIndex);
     $.ajax({
         type: 'POST',
-        url: username + '/functions.php',
+        url: path + 'functions.php',
         data: {
             func: "deleteTask",
             index: $scope.activeTaskIndex
@@ -488,7 +518,7 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
     }
     $.ajax({
         type: 'POST',
-        url: username + '/functions.php',
+        url: path + 'functions.php',
         data: {
             func: "deleteFile",
             index: index,
@@ -510,8 +540,8 @@ bandmaster.controller("bandmasterCtrl", function ($scope, $http) {
   };
 
   $scope.startDownload = function (name) {
-    //console.log(name);
-    window.open("http://davesdata.x10host.com/uploads/" + name);
+    console.log("Downloads currently disabled.");
+    //window.open("http://davesdata.x10host.com/uploads/" + name);
   };
 
   /*
@@ -546,7 +576,7 @@ bandmaster.filter("lengthFilter", function () {
 //Custom filter for the song names. 
 bandmaster.filter("audioFilter", function () {
   return function (i) {
-    return username + "/uploads/" + i;
+    return  path + "uploads/" + i;
   };
 });
 // Another custom filter that calulates the total time. As the total time is saved in
@@ -592,3 +622,4 @@ window.mobileCheck = function () {
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
+

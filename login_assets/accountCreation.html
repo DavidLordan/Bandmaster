@@ -1,0 +1,21 @@
+<div id="create">  
+
+  <div class="form-login">   
+    <h4 id='windowMessage'>Select a username and password.</h4>
+    <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username" name="username" id="login_username" required />
+    </br>
+    <input id="userPassword" class="form-control input-sm chat-input" type='password' placeholder="password" name="password" id="login_password" required/>
+    </br>
+
+    <div class="wrapper">
+      <span class="group-btn">     
+        <button onclick="makeAccount(getElementById('userName'), getElementById('userPassword'))" class="btn btn-success btn-md" value="login">go
+          <span class="glyphicon glyphicon-ok-circle"></span><i class="fa fa-sign-in"></i>
+        </button>
+        <button type='button' onclick='showLogin()' class="btn btn-warning btn-md" value="login">cancel</button>
+      </span>
+    </div>
+  </div>
+
+</div>
+

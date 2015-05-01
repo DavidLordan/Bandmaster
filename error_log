@@ -1,1 +1,0 @@
-[01-May-2015 14:46:54 UTC] PHP Fatal error:  Call to undefined function json_last_error_msg() in /home/davelord/public_html/BandMaster_final/submitEvent.php on line 62

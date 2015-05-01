@@ -23,6 +23,7 @@ body {
 
 .container {
     padding: 225px;
+	  padding-top: 350px;
 }
 
 .row-centered {
@@ -40,6 +41,14 @@ body {
 .col-fixed {
     /* custom width */
     width:320px;
+}
+
+#welcomeMessage{
+  font-size: 46px;
+}
+
+h3{
+  text-align: center;
 }
 
 .form-login {

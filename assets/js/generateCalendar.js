@@ -1,4 +1,34 @@
+/*
+  generateCalendar.js
+
+  This file sets up the calendar for the 
+  administrator page and the public page.
+*/
 $(document).ready(function () {
+  /*function onCalLoad(isLoading, view) {
+   if (isLoading) {
+   setTimeout(onCalLoad, 300);
+   } else {
+   if ($('#calendar').fullCalendar('clientEvents').length === 0) {
+   console.log("clientEvents loaded successfully.");
+   console.log($('#calendar').fullCalendar('clientEvents').length);
+   }
+   var loc = window.location.pathname;
+   var dir = loc.substring(0, loc.lastIndexOf('/'));
+   console.log(dir);
+   }
+   }*/
+  console.log('username is: ' + username);
+  console.log(location.pathname);
+
+  var getEventsURL;
+  if (location.pathname.indexOf('admin') !== -1) {
+    console.log('from Admin');
+    getEventsURL = '../BandMaster_final/assets/php/fullcalendar/get-events.php';
+  } else {
+    console.log('from user');
+    getEventsURL = '../../assets/php/fullcalendar/get-events.php';
+  }
 
   $('#calendar').fullCalendar({
     header: {
@@ -7,96 +37,102 @@ $(document).ready(function () {
       right: 'month,agendaWeek,agendaDay'
     },
     //defaultDate: '2015-02-12',
-    selectable: true,
-    selectHelper: true,
-    select: function (start, end) {
-      //var title = prompt('Event Title:');
-      //$("#selectedDateStart").text(start);
-      //$("#selectedDateEnd").text(end);
-      var eventData;
-      if (title) {
-        eventData = {
-          title: title,
-          start: start,
-          end: end
-        };
-        $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-      }
-      $('#calendar').fullCalendar('unselect');
-    },
-    editable: true,
+
+    /* disables dragging and dropping*/
+    editable: false,
     eventLimit: true, // allow "more" link when too many events
-    events: [
-      {
-        title: 'All Day Event',
-        start: '2015-03-01'
+    //type: POST,
+    events: {
+      data: {
+        username: username
       },
-      {
-        title: 'Long Event',
-        start: '2015-03-07',
-        end: '2015-03-10'
-      },
-      {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2015-03-09T16:00:00'
-      },
-      {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2015-03-16T16:00:00'
-      },
-      {
-        title: 'Conference',
-        start: '2015-03-11',
-        end: '2015-03-13'
-      },
-      {
-        title: 'Meeting',
-        start: '2015-03-12T10:30:00',
-        end: '2015-03-12T12:30:00'
-      },
-      {
-        title: 'Lunch',
-        start: '2015-03-12T12:00:00'
-      },
-      {
-        title: 'Meeting',
-        start: '2015-03-12T14:30:00'
-      },
-      {
-        title: 'Happy Hour',
-        start: '2015-03-12T17:30:00'
-      },
-      {
-        title: 'Dinner',
-        start: '2015-03-12T20:00:00'
-      },
-      {
-        title: 'Birthday Party',
-        start: '2015-03-13T07:00:00'
-      },
-      {
-        title: 'Click for Google',
-        url: 'http://google.com/',
-        start: '2015-03-28'
+      url: getEventsURL,
+      error: function () {
+        console.log("failed");
+        $('#script-warning').show();
       }
-    ]
-  });
+    },
+    /*eventSources: [
+     'json/events.json'
+     ],*/
+    loading: function (bool, isLoading) {
+      $('#loading').toggle(bool);
+      /*if (!isLoading)
+       {
+       console.log($('#calendar').fullCalendar('clientEvents').length);
+       }*/
+    },
+    eventClick: function (calEvent, jsEvent, view) {
+      var $eventID = calEvent.uID;
 
-  $("#currentDate").click(function () {
-    //$('#calendar').;
-  });
+      $('#eventDialog').html("<table class=\"formAlign\">" +
+              "<tr><td><span><b>Name:</b></td><td>" + calEvent.title + "</span></td></tr>" +
+              "<tr><td><span><b>Location:</b></td><td>" + calEvent.location + "</span></td></tr>" +
+              "<tr><td><span><b>Start:</b></td><td>" + calEvent.start._d + "</span></td></tr>" +
+              "<tr><td><span><b>End:</b></td><td>" + calEvent.end._d + "</span></td></tr></table>");
+      console.log(calEvent);
+      console.log("iddd" + $eventID);
 
-  $('#datepairExample .time').timepicker({
-    'showDuration': true,
-    'timeFormat': 'g:ia'
+      console.log("admin?" + (location.pathname.indexOf('admin') !== -1));
+      
+      if (location.pathname.indexOf('admin') !== -1)
+      {
+        $("#eventDialog").dialog({
+          resizable: false,
+          height: 280,
+          width: 500,
+          modal: true,
+          title: 'Event Information',
+          buttons: {
+            CLOSE: function () {
+              $("#eventDialog").dialog("close");
+              console.log("Closed, id =");
+              console.log($eventID);
+            },
+            "DELETE": function () {
+              $.ajax({
+                type: "POST",
+                data: {
+                  eventID: $eventID,
+                  username: username
+                },
+                url: "deleteEvent.php",
+                success: function () {
+                  console.log("Event deleted successfully.");
+                  console.log("success " + $eventID);
+                  /* refetch events before close in order to reduce duration of
+                   * user seeing the calendar flash while the calendar refreshes */
+                  $("#calendar").fullCalendar('refetchEvents');
+                  $("#eventDialog").dialog("close");
+                },
+                error: function () {
+                  console.log("Event failed to delete.");
+                  var loc = window.location.pathname;
+                  var dir = loc.substring(0, loc.lastIndexOf('/'));
+                  console.log(dir);
+                }
+              });
+            }
+          }
+        });
+      }
+      else
+      {
+        $("#eventDialog").dialog({
+          resizable: false,
+          height: 280,
+          width: 500,
+          modal: true,
+          title: 'Event Information',
+          buttons: {
+            CLOSE: function () {
+              $("#eventDialog").dialog("close");
+              console.log("Closed, id =");
+              console.log($eventID);
+            }
+          }
+        });
+      }
+    }
   });
-
-  $('#datepairExample .date').datepicker({
-    'format': 'm/d/yyyy',
-    'autoclose': true
-  });
-
-  $('#datepairExample').datepair();
 });

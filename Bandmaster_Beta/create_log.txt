@@ -1,0 +1,685 @@
+
+
+03/16/2015 @ 2:40:33PM - Creating account: dean
+03/16/2015 @ 2:40:33PM - creating directory: ./dean
+03/16/2015 @ 2:40:33PM - copying ./templates/index.html to: ./dean/index.html
+03/16/2015 @ 2:40:33PM - copying ./templates/functions.php to: ./dean/functions.php
+03/16/2015 @ 2:40:33PM - copying ./templates/upload.php to: ./dean/upload.php
+03/16/2015 @ 2:40:33PM - creating directory: ./dean/uploads
+03/16/2015 @ 2:40:33PM - creating directory: ./dean/JSON
+03/16/2015 @ 2:40:33PM - copying ./templates/JSON/settings.json to: ./dean/JSON/settings.json
+03/16/2015 @ 2:40:33PM - copying ./templates/JSON/songs.json to: ./dean/JSON/songs.json
+03/16/2015 @ 2:40:33PM - copying ./templates/JSON/taskList.json to: ./dean/JSON/taskList.json
+03/16/2015 @ 2:40:33PM - creating directory: ./dean/assets
+03/16/2015 @ 2:40:33PM - creating directory: ./dean/assets/js
+03/16/2015 @ 2:40:33PM - copying ./templates/assets/js/Bandmaster.js to: ./dean/assets/js/Bandmaster.js
+03/16/2015 @ 2:40:33PM - creating directory: ./dean/assets/css
+03/16/2015 @ 2:40:33PM - copying ./templates/assets/css/PKstyleV3.css to: ./dean/assets/css/PKstyleV3.css
+03/16/2015 @ 2:40:33PM - creating directory: ./dean/assets/img
+03/16/2015 @ 2:40:33PM - copying images to: ./dean/assets/img
+
+03/16/2015 @ 2:42:19PM - Creating account: dean
+03/16/2015 @ 2:42:19PM - creating directory: ./dean
+03/16/2015 @ 2:42:19PM - copying ./templates/index.html to: ./dean/index.html
+03/16/2015 @ 2:42:19PM - copying ./templates/functions.php to: ./dean/functions.php
+03/16/2015 @ 2:42:19PM - copying ./templates/upload.php to: ./dean/upload.php
+03/16/2015 @ 2:42:19PM - creating directory: ./dean/uploads
+03/16/2015 @ 2:42:19PM - creating directory: ./dean/JSON
+03/16/2015 @ 2:42:19PM - copying ./templates/JSON/settings.json to: ./dean/JSON/settings.json
+03/16/2015 @ 2:42:19PM - copying ./templates/JSON/songs.json to: ./dean/JSON/songs.json
+03/16/2015 @ 2:42:19PM - copying ./templates/JSON/taskList.json to: ./dean/JSON/taskList.json
+03/16/2015 @ 2:42:19PM - creating directory: ./dean/assets
+03/16/2015 @ 2:42:19PM - creating directory: ./dean/assets/js
+03/16/2015 @ 2:42:19PM - copying ./templates/assets/js/Bandmaster.js to: ./dean/assets/js/Bandmaster.js
+03/16/2015 @ 2:42:19PM - creating directory: ./dean/assets/css
+03/16/2015 @ 2:42:19PM - copying ./templates/assets/css/style.css to: ./dean/assets/css/style.css
+03/16/2015 @ 2:42:19PM - creating directory: ./dean/assets/img
+03/16/2015 @ 2:42:19PM - copying images to: ./dean/assets/img
+
+03/16/2015 @ 2:44:11PM - Creating account: dean
+03/16/2015 @ 2:44:11PM - creating directory: ./dean
+03/16/2015 @ 2:44:11PM - copying ./templates/index.html to: ./dean/index.html
+03/16/2015 @ 2:44:11PM - copying ./templates/functions.php to: ./dean/functions.php
+03/16/2015 @ 2:44:11PM - copying ./templates/upload.php to: ./dean/upload.php
+03/16/2015 @ 2:44:11PM - creating directory: ./dean/uploads
+03/16/2015 @ 2:44:11PM - creating directory: ./dean/JSON
+03/16/2015 @ 2:44:11PM - copying ./templates/JSON/settings.json to: ./dean/JSON/settings.json
+03/16/2015 @ 2:44:11PM - copying ./templates/JSON/songs.json to: ./dean/JSON/songs.json
+03/16/2015 @ 2:44:11PM - copying ./templates/JSON/taskList.json to: ./dean/JSON/taskList.json
+03/16/2015 @ 2:44:11PM - creating directory: ./dean/assets
+03/16/2015 @ 2:44:11PM - creating directory: ./dean/assets/js
+03/16/2015 @ 2:44:11PM - copying ./templates/assets/js/Bandmaster.js to: ./dean/assets/js/Bandmaster.js
+03/16/2015 @ 2:44:11PM - creating directory: ./dean/assets/css
+03/16/2015 @ 2:44:11PM - copying ./templates/assets/css/style.css to: ./dean/assets/css/style.css
+03/16/2015 @ 2:44:11PM - creating directory: ./dean/assets/img
+03/16/2015 @ 2:44:11PM - copying images to: ./dean/assets/img
+
+03/18/2015 @ 2:32:22AM - Creating account: a
+03/18/2015 @ 2:32:22AM - creating directory: ./a
+03/18/2015 @ 2:32:22AM - copying ./templates/index.html to: ./a/index.html
+03/18/2015 @ 2:32:22AM - copying ./templates/functions.php to: ./a/functions.php
+03/18/2015 @ 2:32:22AM - copying ./templates/upload.php to: ./a/upload.php
+03/18/2015 @ 2:32:22AM - creating directory: ./a/uploads
+03/18/2015 @ 2:32:22AM - creating directory: ./a/JSON
+03/18/2015 @ 2:32:22AM - copying ./templates/JSON/settings.json to: ./a/JSON/settings.json
+03/18/2015 @ 2:32:22AM - copying ./templates/JSON/songs.json to: ./a/JSON/songs.json
+03/18/2015 @ 2:32:22AM - copying ./templates/JSON/taskList.json to: ./a/JSON/taskList.json
+03/18/2015 @ 2:32:22AM - creating directory: ./a/assets
+03/18/2015 @ 2:32:22AM - creating directory: ./a/assets/js
+03/18/2015 @ 2:32:22AM - copying ./templates/assets/js/Bandmaster.js to: ./a/assets/js/Bandmaster.js
+03/18/2015 @ 2:32:22AM - creating directory: ./a/assets/css
+03/18/2015 @ 2:32:22AM - copying ./templates/assets/css/style.css to: ./a/assets/css/style.css
+03/18/2015 @ 2:32:22AM - creating directory: ./a/assets/img
+03/18/2015 @ 2:32:22AM - copying images to: ./a/assets/img
+
+03/18/2015 @ 11:27:54PM - Creating account: dave
+03/18/2015 @ 11:27:54PM - creating directory: ./dave
+03/18/2015 @ 11:27:54PM - copying ./templates/index.html to: ./dave/index.html
+03/18/2015 @ 11:27:54PM - copying ./templates/functions.php to: ./dave/functions.php
+03/18/2015 @ 11:27:54PM - copying ./templates/upload.php to: ./dave/upload.php
+03/18/2015 @ 11:27:54PM - creating directory: ./dave/uploads
+03/18/2015 @ 11:27:54PM - creating directory: ./dave/JSON
+03/18/2015 @ 11:27:54PM - copying ./templates/JSON/settings.json to: ./dave/JSON/settings.json
+03/18/2015 @ 11:27:54PM - copying ./templates/JSON/songs.json to: ./dave/JSON/songs.json
+03/18/2015 @ 11:27:54PM - copying ./templates/JSON/taskList.json to: ./dave/JSON/taskList.json
+03/18/2015 @ 11:27:54PM - creating directory: ./dave/assets
+03/18/2015 @ 11:27:54PM - creating directory: ./dave/assets/js
+03/18/2015 @ 11:27:54PM - copying ./templates/assets/js/Bandmaster.js to: ./dave/assets/js/Bandmaster.js
+03/18/2015 @ 11:27:54PM - creating directory: ./dave/assets/css
+03/18/2015 @ 11:27:54PM - copying ./templates/assets/css/style.css to: ./dave/assets/css/style.css
+03/18/2015 @ 11:27:54PM - creating directory: ./dave/assets/img
+03/18/2015 @ 11:27:54PM - copying images to: ./dave/assets/img
+
+03/18/2015 @ 11:29:44PM - Creating account: dave5
+03/18/2015 @ 11:29:44PM - creating directory: ./dave5
+03/18/2015 @ 11:29:44PM - copying ./templates/index.html to: ./dave5/index.html
+03/18/2015 @ 11:29:44PM - copying ./templates/functions.php to: ./dave5/functions.php
+03/18/2015 @ 11:29:44PM - copying ./templates/upload.php to: ./dave5/upload.php
+03/18/2015 @ 11:29:44PM - creating directory: ./dave5/uploads
+03/18/2015 @ 11:29:44PM - creating directory: ./dave5/JSON
+03/18/2015 @ 11:29:44PM - copying ./templates/JSON/settings.json to: ./dave5/JSON/settings.json
+03/18/2015 @ 11:29:44PM - copying ./templates/JSON/songs.json to: ./dave5/JSON/songs.json
+03/18/2015 @ 11:29:44PM - copying ./templates/JSON/taskList.json to: ./dave5/JSON/taskList.json
+03/18/2015 @ 11:29:44PM - creating directory: ./dave5/assets
+03/18/2015 @ 11:29:44PM - creating directory: ./dave5/assets/js
+03/18/2015 @ 11:29:44PM - copying ./templates/assets/js/Bandmaster.js to: ./dave5/assets/js/Bandmaster.js
+03/18/2015 @ 11:29:44PM - creating directory: ./dave5/assets/css
+03/18/2015 @ 11:29:44PM - copying ./templates/assets/css/style.css to: ./dave5/assets/css/style.css
+03/18/2015 @ 11:29:44PM - creating directory: ./dave5/assets/img
+03/18/2015 @ 11:29:44PM - copying images to: ./dave5/assets/img
+
+03/18/2015 @ 11:48:37PM - Creating account: david
+03/18/2015 @ 11:48:37PM - creating directory: ./david
+03/18/2015 @ 11:48:37PM - copying ./templates/index.html to: ./david/index.html
+03/18/2015 @ 11:48:37PM - copying ./templates/functions.php to: ./david/functions.php
+03/18/2015 @ 11:48:37PM - copying ./templates/upload.php to: ./david/upload.php
+03/18/2015 @ 11:48:37PM - creating directory: ./david/uploads
+03/18/2015 @ 11:48:37PM - creating directory: ./david/JSON
+03/18/2015 @ 11:48:37PM - copying ./templates/JSON/settings.json to: ./david/JSON/settings.json
+03/18/2015 @ 11:48:37PM - copying ./templates/JSON/songs.json to: ./david/JSON/songs.json
+03/18/2015 @ 11:48:37PM - copying ./templates/JSON/taskList.json to: ./david/JSON/taskList.json
+03/18/2015 @ 11:48:37PM - creating directory: ./david/assets
+03/18/2015 @ 11:48:37PM - creating directory: ./david/assets/js
+03/18/2015 @ 11:48:37PM - copying ./templates/assets/js/Bandmaster.js to: ./david/assets/js/Bandmaster.js
+03/18/2015 @ 11:48:37PM - creating directory: ./david/assets/css
+03/18/2015 @ 11:48:37PM - copying ./templates/assets/css/style.css to: ./david/assets/css/style.css
+03/18/2015 @ 11:48:37PM - creating directory: ./david/assets/img
+03/18/2015 @ 11:48:37PM - copying images to: ./david/assets/img
+
+03/19/2015 @ 12:01:49AM - Creating account: dave10
+03/19/2015 @ 12:01:49AM - creating directory: ./dave10
+03/19/2015 @ 12:01:49AM - copying ./templates/index.html to: ./dave10/index.html
+03/19/2015 @ 12:01:49AM - copying ./templates/functions.php to: ./dave10/functions.php
+03/19/2015 @ 12:01:49AM - copying ./templates/upload.php to: ./dave10/upload.php
+03/19/2015 @ 12:01:49AM - creating directory: ./dave10/uploads
+03/19/2015 @ 12:01:49AM - creating directory: ./dave10/JSON
+03/19/2015 @ 12:01:49AM - copying ./templates/JSON/settings.json to: ./dave10/JSON/settings.json
+03/19/2015 @ 12:01:49AM - copying ./templates/JSON/songs.json to: ./dave10/JSON/songs.json
+03/19/2015 @ 12:01:49AM - copying ./templates/JSON/taskList.json to: ./dave10/JSON/taskList.json
+03/19/2015 @ 12:01:49AM - creating directory: ./dave10/assets
+03/19/2015 @ 12:01:49AM - creating directory: ./dave10/assets/js
+03/19/2015 @ 12:01:49AM - copying ./templates/assets/js/Bandmaster.js to: ./dave10/assets/js/Bandmaster.js
+03/19/2015 @ 12:01:49AM - creating directory: ./dave10/assets/css
+03/19/2015 @ 12:01:49AM - copying ./templates/assets/css/style.css to: ./dave10/assets/css/style.css
+03/19/2015 @ 12:01:49AM - creating directory: ./dave10/assets/img
+03/19/2015 @ 12:01:49AM - copying images to: ./dave10/assets/img
+
+03/19/2015 @ 12:04:25AM - Creating account: dude
+03/19/2015 @ 12:04:25AM - creating directory: ./dude
+03/19/2015 @ 12:04:25AM - copying ./templates/index.html to: ./dude/index.html
+03/19/2015 @ 12:04:25AM - copying ./templates/functions.php to: ./dude/functions.php
+03/19/2015 @ 12:04:25AM - copying ./templates/upload.php to: ./dude/upload.php
+03/19/2015 @ 12:04:25AM - creating directory: ./dude/uploads
+03/19/2015 @ 12:04:25AM - creating directory: ./dude/JSON
+03/19/2015 @ 12:04:25AM - copying ./templates/JSON/settings.json to: ./dude/JSON/settings.json
+03/19/2015 @ 12:04:25AM - copying ./templates/JSON/songs.json to: ./dude/JSON/songs.json
+03/19/2015 @ 12:04:25AM - copying ./templates/JSON/taskList.json to: ./dude/JSON/taskList.json
+03/19/2015 @ 12:04:25AM - creating directory: ./dude/assets
+03/19/2015 @ 12:04:25AM - creating directory: ./dude/assets/js
+03/19/2015 @ 12:04:25AM - copying ./templates/assets/js/Bandmaster.js to: ./dude/assets/js/Bandmaster.js
+03/19/2015 @ 12:04:25AM - creating directory: ./dude/assets/css
+03/19/2015 @ 12:04:25AM - copying ./templates/assets/css/style.css to: ./dude/assets/css/style.css
+03/19/2015 @ 12:04:25AM - creating directory: ./dude/assets/img
+03/19/2015 @ 12:04:25AM - copying images to: ./dude/assets/img
+
+03/19/2015 @ 12:15:30AM - Creating account: dave1
+03/19/2015 @ 12:15:30AM - creating directory: ./dave1
+03/19/2015 @ 12:15:30AM - copying ./templates/index.html to: ./dave1/index.html
+03/19/2015 @ 12:15:30AM - copying ./templates/functions.php to: ./dave1/functions.php
+03/19/2015 @ 12:15:30AM - copying ./templates/upload.php to: ./dave1/upload.php
+03/19/2015 @ 12:15:30AM - creating directory: ./dave1/uploads
+03/19/2015 @ 12:15:30AM - creating directory: ./dave1/JSON
+03/19/2015 @ 12:15:30AM - copying ./templates/JSON/settings.json to: ./dave1/JSON/settings.json
+03/19/2015 @ 12:15:30AM - copying ./templates/JSON/songs.json to: ./dave1/JSON/songs.json
+03/19/2015 @ 12:15:30AM - copying ./templates/JSON/taskList.json to: ./dave1/JSON/taskList.json
+03/19/2015 @ 12:15:30AM - creating directory: ./dave1/assets
+03/19/2015 @ 12:15:30AM - creating directory: ./dave1/assets/js
+03/19/2015 @ 12:15:30AM - copying ./templates/assets/js/Bandmaster.js to: ./dave1/assets/js/Bandmaster.js
+03/19/2015 @ 12:15:30AM - creating directory: ./dave1/assets/css
+03/19/2015 @ 12:15:30AM - copying ./templates/assets/css/style.css to: ./dave1/assets/css/style.css
+03/19/2015 @ 12:15:30AM - creating directory: ./dave1/assets/img
+03/19/2015 @ 12:15:30AM - copying images to: ./dave1/assets/img
+
+03/19/2015 @ 12:16:11AM - Creating account: dave2
+03/19/2015 @ 12:16:11AM - creating directory: ./dave2
+03/19/2015 @ 12:16:11AM - copying ./templates/index.html to: ./dave2/index.html
+03/19/2015 @ 12:16:11AM - copying ./templates/functions.php to: ./dave2/functions.php
+03/19/2015 @ 12:16:11AM - copying ./templates/upload.php to: ./dave2/upload.php
+03/19/2015 @ 12:16:11AM - creating directory: ./dave2/uploads
+03/19/2015 @ 12:16:11AM - creating directory: ./dave2/JSON
+03/19/2015 @ 12:16:11AM - copying ./templates/JSON/settings.json to: ./dave2/JSON/settings.json
+03/19/2015 @ 12:16:11AM - copying ./templates/JSON/songs.json to: ./dave2/JSON/songs.json
+03/19/2015 @ 12:16:11AM - copying ./templates/JSON/taskList.json to: ./dave2/JSON/taskList.json
+03/19/2015 @ 12:16:11AM - creating directory: ./dave2/assets
+03/19/2015 @ 12:16:11AM - creating directory: ./dave2/assets/js
+03/19/2015 @ 12:16:11AM - copying ./templates/assets/js/Bandmaster.js to: ./dave2/assets/js/Bandmaster.js
+03/19/2015 @ 12:16:11AM - creating directory: ./dave2/assets/css
+03/19/2015 @ 12:16:11AM - copying ./templates/assets/css/style.css to: ./dave2/assets/css/style.css
+03/19/2015 @ 12:16:11AM - creating directory: ./dave2/assets/img
+03/19/2015 @ 12:16:11AM - copying images to: ./dave2/assets/img
+
+03/19/2015 @ 12:19:42AM - Creating account: dave3
+03/19/2015 @ 12:19:42AM - creating directory: ./dave3
+03/19/2015 @ 12:19:42AM - copying ./templates/index.html to: ./dave3/index.html
+03/19/2015 @ 12:19:42AM - copying ./templates/functions.php to: ./dave3/functions.php
+03/19/2015 @ 12:19:42AM - copying ./templates/upload.php to: ./dave3/upload.php
+03/19/2015 @ 12:19:42AM - creating directory: ./dave3/uploads
+03/19/2015 @ 12:19:42AM - creating directory: ./dave3/JSON
+03/19/2015 @ 12:19:42AM - copying ./templates/JSON/settings.json to: ./dave3/JSON/settings.json
+03/19/2015 @ 12:19:42AM - copying ./templates/JSON/songs.json to: ./dave3/JSON/songs.json
+03/19/2015 @ 12:19:42AM - copying ./templates/JSON/taskList.json to: ./dave3/JSON/taskList.json
+03/19/2015 @ 12:19:42AM - creating directory: ./dave3/assets
+03/19/2015 @ 12:19:42AM - creating directory: ./dave3/assets/js
+03/19/2015 @ 12:19:42AM - copying ./templates/assets/js/Bandmaster.js to: ./dave3/assets/js/Bandmaster.js
+03/19/2015 @ 12:19:42AM - creating directory: ./dave3/assets/css
+03/19/2015 @ 12:19:42AM - copying ./templates/assets/css/style.css to: ./dave3/assets/css/style.css
+03/19/2015 @ 12:19:42AM - creating directory: ./dave3/assets/img
+03/19/2015 @ 12:19:42AM - copying images to: ./dave3/assets/img
+
+03/19/2015 @ 12:30:42AM - Creating account: woah
+03/19/2015 @ 12:30:42AM - creating directory: ./woah
+03/19/2015 @ 12:30:42AM - copying ./templates/index.html to: ./woah/index.html
+03/19/2015 @ 12:30:42AM - copying ./templates/functions.php to: ./woah/functions.php
+03/19/2015 @ 12:30:42AM - copying ./templates/upload.php to: ./woah/upload.php
+03/19/2015 @ 12:30:42AM - creating directory: ./woah/uploads
+03/19/2015 @ 12:30:42AM - creating directory: ./woah/JSON
+03/19/2015 @ 12:30:42AM - copying ./templates/JSON/settings.json to: ./woah/JSON/settings.json
+03/19/2015 @ 12:30:42AM - copying ./templates/JSON/songs.json to: ./woah/JSON/songs.json
+03/19/2015 @ 12:30:42AM - copying ./templates/JSON/taskList.json to: ./woah/JSON/taskList.json
+03/19/2015 @ 12:30:42AM - creating directory: ./woah/assets
+03/19/2015 @ 12:30:42AM - creating directory: ./woah/assets/js
+03/19/2015 @ 12:30:42AM - copying ./templates/assets/js/Bandmaster.js to: ./woah/assets/js/Bandmaster.js
+03/19/2015 @ 12:30:42AM - creating directory: ./woah/assets/css
+03/19/2015 @ 12:30:42AM - copying ./templates/assets/css/style.css to: ./woah/assets/css/style.css
+03/19/2015 @ 12:30:42AM - creating directory: ./woah/assets/img
+03/19/2015 @ 12:30:42AM - copying images to: ./woah/assets/img
+
+03/26/2015 @ 12:48:13PM - Creating account: test123
+03/26/2015 @ 12:48:13PM - creating directory: ./test123
+03/26/2015 @ 12:48:13PM - copying ./templates/index.html to: ./test123/index.html
+03/26/2015 @ 12:48:13PM - copying ./templates/functions.php to: ./test123/functions.php
+03/26/2015 @ 12:48:13PM - copying ./templates/upload.php to: ./test123/upload.php
+03/26/2015 @ 12:48:13PM - creating directory: ./test123/uploads
+03/26/2015 @ 12:48:13PM - creating directory: ./test123/JSON
+03/26/2015 @ 12:48:13PM - copying ./templates/JSON/settings.json to: ./test123/JSON/settings.json
+03/26/2015 @ 12:48:13PM - copying ./templates/JSON/songs.json to: ./test123/JSON/songs.json
+03/26/2015 @ 12:48:13PM - copying ./templates/JSON/taskList.json to: ./test123/JSON/taskList.json
+03/26/2015 @ 12:48:13PM - creating directory: ./test123/assets
+03/26/2015 @ 12:48:13PM - creating directory: ./test123/assets/js
+03/26/2015 @ 12:48:13PM - copying ./templates/assets/js/Bandmaster.js to: ./test123/assets/js/Bandmaster.js
+03/26/2015 @ 12:48:13PM - creating directory: ./test123/assets/css
+03/26/2015 @ 12:48:13PM - copying ./templates/assets/css/style.css to: ./test123/assets/css/style.css
+03/26/2015 @ 12:48:13PM - creating directory: ./test123/assets/img
+03/26/2015 @ 12:48:13PM - copying images to: ./test123/assets/img
+
+03/28/2015 @ 9:41:23PM - Creating account: b
+03/28/2015 @ 9:41:23PM - creating directory: ./b
+03/28/2015 @ 9:41:23PM - copying ./templates/index.html to: ./b/index.html
+03/28/2015 @ 9:41:23PM - copying ./templates/functions.php to: ./b/functions.php
+03/28/2015 @ 9:41:23PM - copying ./templates/upload.php to: ./b/upload.php
+03/28/2015 @ 9:41:23PM - creating directory: ./b/uploads
+03/28/2015 @ 9:41:23PM - creating directory: ./b/JSON
+03/28/2015 @ 9:41:23PM - copying ./templates/JSON/settings.json to: ./b/JSON/settings.json
+03/28/2015 @ 9:41:23PM - copying ./templates/JSON/songs.json to: ./b/JSON/songs.json
+03/28/2015 @ 9:41:23PM - copying ./templates/JSON/taskList.json to: ./b/JSON/taskList.json
+03/28/2015 @ 9:41:23PM - creating directory: ./b/assets
+03/28/2015 @ 9:41:23PM - creating directory: ./b/assets/js
+03/28/2015 @ 9:41:23PM - copying ./templates/assets/js/Bandmaster.js to: ./b/assets/js/Bandmaster.js
+03/28/2015 @ 9:41:23PM - creating directory: ./b/assets/css
+03/28/2015 @ 9:41:23PM - copying ./templates/assets/css/style.css to: ./b/assets/css/style.css
+03/28/2015 @ 9:41:23PM - creating directory: ./b/assets/img
+03/28/2015 @ 9:41:23PM - copying images to: ./b/assets/img
+
+03/29/2015 @ 2:44:26PM - Creating account: test321
+03/29/2015 @ 2:44:26PM - creating directory: ./test321
+03/29/2015 @ 2:44:26PM - copying ./templates/index.html to: ./test321/index.html
+03/29/2015 @ 2:44:26PM - copying ./templates/functions.php to: ./test321/functions.php
+03/29/2015 @ 2:44:26PM - copying ./templates/upload.php to: ./test321/upload.php
+03/29/2015 @ 2:44:26PM - creating directory: ./test321/uploads
+03/29/2015 @ 2:44:26PM - creating directory: ./test321/JSON
+03/29/2015 @ 2:44:26PM - copying ./templates/JSON/settings.json to: ./test321/JSON/settings.json
+03/29/2015 @ 2:44:26PM - copying ./templates/JSON/songs.json to: ./test321/JSON/songs.json
+03/29/2015 @ 2:44:26PM - copying ./templates/JSON/taskList.json to: ./test321/JSON/taskList.json
+03/29/2015 @ 2:44:26PM - creating directory: ./test321/assets
+03/29/2015 @ 2:44:26PM - creating directory: ./test321/assets/js
+03/29/2015 @ 2:44:26PM - copying ./templates/assets/js/Bandmaster.js to: ./test321/assets/js/Bandmaster.js
+03/29/2015 @ 2:44:26PM - creating directory: ./test321/assets/css
+03/29/2015 @ 2:44:26PM - copying ./templates/assets/css/style.css to: ./test321/assets/css/style.css
+03/29/2015 @ 2:44:26PM - creating directory: ./test321/assets/img
+03/29/2015 @ 2:44:26PM - copying images to: ./test321/assets/img
+
+03/29/2015 @ 8:18:45PM - Creating account: woahman
+03/29/2015 @ 8:18:45PM - creating directory: ./woahman
+03/29/2015 @ 8:18:45PM - copying ./templates/index.html to: ./woahman/index.html
+03/29/2015 @ 8:18:45PM - copying ./templates/functions.php to: ./woahman/functions.php
+03/29/2015 @ 8:18:45PM - copying ./templates/upload.php to: ./woahman/upload.php
+03/29/2015 @ 8:18:45PM - creating directory: ./woahman/uploads
+03/29/2015 @ 8:18:45PM - creating directory: ./woahman/JSON
+03/29/2015 @ 8:18:45PM - copying ./templates/JSON/settings.json to: ./woahman/JSON/settings.json
+03/29/2015 @ 8:18:45PM - copying ./templates/JSON/songs.json to: ./woahman/JSON/songs.json
+03/29/2015 @ 8:18:45PM - copying ./templates/JSON/taskList.json to: ./woahman/JSON/taskList.json
+03/29/2015 @ 8:18:45PM - creating directory: ./woahman/assets
+03/29/2015 @ 8:18:45PM - creating directory: ./woahman/assets/js
+03/29/2015 @ 8:18:45PM - copying ./templates/assets/js/Bandmaster.js to: ./woahman/assets/js/Bandmaster.js
+03/29/2015 @ 8:18:45PM - creating directory: ./woahman/assets/css
+03/29/2015 @ 8:18:45PM - copying ./templates/assets/css/style.css to: ./woahman/assets/css/style.css
+03/29/2015 @ 8:18:45PM - creating directory: ./woahman/assets/img
+03/29/2015 @ 8:18:45PM - copying images to: ./woahman/assets/img
+
+03/29/2015 @ 8:29:59PM - Creating account: woahman
+03/29/2015 @ 8:29:59PM - creating directory: ./woahman
+03/29/2015 @ 8:29:59PM - copying ./templates/index.html to: ./woahman/index.html
+03/29/2015 @ 8:29:59PM - copying ./templates/functions.php to: ./woahman/functions.php
+03/29/2015 @ 8:29:59PM - copying ./templates/upload.php to: ./woahman/upload.php
+03/29/2015 @ 8:29:59PM - creating directory: ./woahman/uploads
+03/29/2015 @ 8:29:59PM - creating directory: ./woahman/JSON
+03/29/2015 @ 8:29:59PM - copying ./templates/JSON/settings.json to: ./woahman/JSON/settings.json
+03/29/2015 @ 8:29:59PM - copying ./templates/JSON/songs.json to: ./woahman/JSON/songs.json
+03/29/2015 @ 8:29:59PM - copying ./templates/JSON/taskList.json to: ./woahman/JSON/taskList.json
+03/29/2015 @ 8:29:59PM - creating directory: ./woahman/assets
+03/29/2015 @ 8:29:59PM - creating directory: ./woahman/assets/js
+03/29/2015 @ 8:29:59PM - copying ./templates/assets/js/Bandmaster.js to: ./woahman/assets/js/Bandmaster.js
+03/29/2015 @ 8:29:59PM - creating directory: ./woahman/assets/css
+03/29/2015 @ 8:29:59PM - copying ./templates/assets/css/style.css to: ./woahman/assets/css/style.css
+03/29/2015 @ 8:29:59PM - creating directory: ./woahman/assets/img
+03/29/2015 @ 8:29:59PM - copying images to: ./woahman/assets/img
+
+03/29/2015 @ 10:34:40PM - Creating account: 123
+03/29/2015 @ 10:34:40PM - creating directory: ./123
+03/29/2015 @ 10:34:40PM - copying ./templates/index.html to: ./123/index.html
+03/29/2015 @ 10:34:40PM - copying ./templates/functions.php to: ./123/functions.php
+03/29/2015 @ 10:34:40PM - copying ./templates/upload.php to: ./123/upload.php
+03/29/2015 @ 10:34:40PM - creating directory: ./123/uploads
+03/29/2015 @ 10:34:40PM - creating directory: ./123/JSON
+03/29/2015 @ 10:34:40PM - copying ./templates/JSON/settings.json to: ./123/JSON/settings.json
+03/29/2015 @ 10:34:40PM - copying ./templates/JSON/songs.json to: ./123/JSON/songs.json
+03/29/2015 @ 10:34:40PM - copying ./templates/JSON/taskList.json to: ./123/JSON/taskList.json
+03/29/2015 @ 10:34:40PM - creating directory: ./123/assets
+03/29/2015 @ 10:34:40PM - creating directory: ./123/assets/js
+03/29/2015 @ 10:34:40PM - copying ./templates/assets/js/Bandmaster.js to: ./123/assets/js/Bandmaster.js
+03/29/2015 @ 10:34:40PM - creating directory: ./123/assets/css
+03/29/2015 @ 10:34:40PM - copying ./templates/assets/css/style.css to: ./123/assets/css/style.css
+03/29/2015 @ 10:34:40PM - creating directory: ./123/assets/img
+03/29/2015 @ 10:34:40PM - copying images to: ./123/assets/img
+
+03/29/2015 @ 10:36:02PM - Creating account: 123
+03/29/2015 @ 10:36:02PM - creating directory: ./123
+03/29/2015 @ 10:36:02PM - copying ./templates/index.html to: ./123/index.html
+03/29/2015 @ 10:36:02PM - copying ./templates/functions.php to: ./123/functions.php
+03/29/2015 @ 10:36:02PM - copying ./templates/upload.php to: ./123/upload.php
+03/29/2015 @ 10:36:02PM - creating directory: ./123/uploads
+03/29/2015 @ 10:36:02PM - creating directory: ./123/JSON
+03/29/2015 @ 10:36:02PM - copying ./templates/JSON/settings.json to: ./123/JSON/settings.json
+03/29/2015 @ 10:36:02PM - copying ./templates/JSON/songs.json to: ./123/JSON/songs.json
+03/29/2015 @ 10:36:02PM - copying ./templates/JSON/taskList.json to: ./123/JSON/taskList.json
+03/29/2015 @ 10:36:02PM - creating directory: ./123/assets
+03/29/2015 @ 10:36:02PM - creating directory: ./123/assets/js
+03/29/2015 @ 10:36:02PM - copying ./templates/assets/js/Bandmaster.js to: ./123/assets/js/Bandmaster.js
+03/29/2015 @ 10:36:02PM - creating directory: ./123/assets/css
+03/29/2015 @ 10:36:02PM - copying ./templates/assets/css/style.css to: ./123/assets/css/style.css
+03/29/2015 @ 10:36:02PM - creating directory: ./123/assets/img
+03/29/2015 @ 10:36:02PM - copying images to: ./123/assets/img
+
+03/29/2015 @ 10:37:20PM - Creating account: 123
+03/29/2015 @ 10:37:20PM - creating directory: ./123
+03/29/2015 @ 10:37:20PM - copying ./templates/index.html to: ./123/index.html
+03/29/2015 @ 10:37:20PM - copying ./templates/functions.php to: ./123/functions.php
+03/29/2015 @ 10:37:20PM - copying ./templates/upload.php to: ./123/upload.php
+03/29/2015 @ 10:37:20PM - creating directory: ./123/uploads
+03/29/2015 @ 10:37:20PM - creating directory: ./123/JSON
+03/29/2015 @ 10:37:20PM - copying ./templates/JSON/settings.json to: ./123/JSON/settings.json
+03/29/2015 @ 10:37:20PM - copying ./templates/JSON/songs.json to: ./123/JSON/songs.json
+03/29/2015 @ 10:37:20PM - copying ./templates/JSON/taskList.json to: ./123/JSON/taskList.json
+03/29/2015 @ 10:37:20PM - creating directory: ./123/assets
+03/29/2015 @ 10:37:20PM - creating directory: ./123/assets/js
+03/29/2015 @ 10:37:20PM - copying ./templates/assets/js/Bandmaster.js to: ./123/assets/js/Bandmaster.js
+03/29/2015 @ 10:37:20PM - creating directory: ./123/assets/css
+03/29/2015 @ 10:37:20PM - copying ./templates/assets/css/style.css to: ./123/assets/css/style.css
+03/29/2015 @ 10:37:20PM - creating directory: ./123/assets/img
+03/29/2015 @ 10:37:20PM - copying images to: ./123/assets/img
+
+03/29/2015 @ 10:46:36PM - Creating account: test123
+03/29/2015 @ 10:46:36PM - creating directory: ./test123
+03/29/2015 @ 10:46:36PM - copying ./templates/index.html to: ./test123/index.html
+03/29/2015 @ 10:46:36PM - copying ./templates/functions.php to: ./test123/functions.php
+03/29/2015 @ 10:46:36PM - copying ./templates/upload.php to: ./test123/upload.php
+03/29/2015 @ 10:46:36PM - creating directory: ./test123/uploads
+03/29/2015 @ 10:46:36PM - creating directory: ./test123/JSON
+03/29/2015 @ 10:46:36PM - copying ./templates/JSON/settings.json to: ./test123/JSON/settings.json
+03/29/2015 @ 10:46:36PM - copying ./templates/JSON/songs.json to: ./test123/JSON/songs.json
+03/29/2015 @ 10:46:36PM - copying ./templates/JSON/taskList.json to: ./test123/JSON/taskList.json
+03/29/2015 @ 10:46:36PM - creating directory: ./test123/assets
+03/29/2015 @ 10:46:36PM - creating directory: ./test123/assets/js
+03/29/2015 @ 10:46:36PM - copying ./templates/assets/js/Bandmaster.js to: ./test123/assets/js/Bandmaster.js
+03/29/2015 @ 10:46:36PM - creating directory: ./test123/assets/css
+03/29/2015 @ 10:46:36PM - copying ./templates/assets/css/style.css to: ./test123/assets/css/style.css
+03/29/2015 @ 10:46:36PM - creating directory: ./test123/assets/img
+03/29/2015 @ 10:46:36PM - copying images to: ./test123/assets/img
+
+03/29/2015 @ 10:48:34PM - Creating account: 123
+03/29/2015 @ 10:48:34PM - creating directory: ./123
+03/29/2015 @ 10:48:34PM - copying ./templates/index.html to: ./123/index.html
+03/29/2015 @ 10:48:34PM - copying ./templates/functions.php to: ./123/functions.php
+03/29/2015 @ 10:48:34PM - copying ./templates/upload.php to: ./123/upload.php
+03/29/2015 @ 10:48:34PM - creating directory: ./123/uploads
+03/29/2015 @ 10:48:34PM - creating directory: ./123/JSON
+03/29/2015 @ 10:48:34PM - copying ./templates/JSON/settings.json to: ./123/JSON/settings.json
+03/29/2015 @ 10:48:34PM - copying ./templates/JSON/songs.json to: ./123/JSON/songs.json
+03/29/2015 @ 10:48:34PM - copying ./templates/JSON/taskList.json to: ./123/JSON/taskList.json
+03/29/2015 @ 10:48:34PM - creating directory: ./123/assets
+03/29/2015 @ 10:48:34PM - creating directory: ./123/assets/js
+03/29/2015 @ 10:48:34PM - copying ./templates/assets/js/Bandmaster.js to: ./123/assets/js/Bandmaster.js
+03/29/2015 @ 10:48:34PM - creating directory: ./123/assets/css
+03/29/2015 @ 10:48:34PM - copying ./templates/assets/css/style.css to: ./123/assets/css/style.css
+03/29/2015 @ 10:48:34PM - creating directory: ./123/assets/img
+03/29/2015 @ 10:48:34PM - copying images to: ./123/assets/img
+
+03/30/2015 @ 9:35:37AM - Creating account: test321
+03/30/2015 @ 9:35:37AM - creating directory: ./test321
+03/30/2015 @ 9:35:37AM - copying ./templates/index.html to: ./test321/index.html
+03/30/2015 @ 9:35:37AM - copying ./templates/functions.php to: ./test321/functions.php
+03/30/2015 @ 9:35:37AM - copying ./templates/upload.php to: ./test321/upload.php
+03/30/2015 @ 9:35:37AM - creating directory: ./test321/uploads
+03/30/2015 @ 9:35:37AM - creating directory: ./test321/JSON
+03/30/2015 @ 9:35:37AM - copying ./templates/JSON/settings.json to: ./test321/JSON/settings.json
+03/30/2015 @ 9:35:37AM - copying ./templates/JSON/songs.json to: ./test321/JSON/songs.json
+03/30/2015 @ 9:35:37AM - copying ./templates/JSON/taskList.json to: ./test321/JSON/taskList.json
+03/30/2015 @ 9:35:37AM - creating directory: ./test321/assets
+03/30/2015 @ 9:35:37AM - creating directory: ./test321/assets/js
+03/30/2015 @ 9:35:37AM - copying ./templates/assets/js/Bandmaster.js to: ./test321/assets/js/Bandmaster.js
+03/30/2015 @ 9:35:37AM - creating directory: ./test321/assets/css
+03/30/2015 @ 9:35:37AM - copying ./templates/assets/css/style.css to: ./test321/assets/css/style.css
+03/30/2015 @ 9:35:37AM - creating directory: ./test321/assets/img
+03/30/2015 @ 9:35:37AM - copying images to: ./test321/assets/img
+
+03/30/2015 @ 9:44:56AM - Creating account: assetts
+03/30/2015 @ 9:44:56AM - creating directory: ./assetts
+03/30/2015 @ 9:44:56AM - copying ./templates/index.html to: ./assetts/index.html
+03/30/2015 @ 9:44:56AM - copying ./templates/functions.php to: ./assetts/functions.php
+03/30/2015 @ 9:44:56AM - copying ./templates/upload.php to: ./assetts/upload.php
+03/30/2015 @ 9:44:56AM - creating directory: ./assetts/uploads
+03/30/2015 @ 9:44:56AM - creating directory: ./assetts/JSON
+03/30/2015 @ 9:44:56AM - copying ./templates/JSON/settings.json to: ./assetts/JSON/settings.json
+03/30/2015 @ 9:44:56AM - copying ./templates/JSON/songs.json to: ./assetts/JSON/songs.json
+03/30/2015 @ 9:44:56AM - copying ./templates/JSON/taskList.json to: ./assetts/JSON/taskList.json
+03/30/2015 @ 9:44:56AM - creating directory: ./assetts/assets
+03/30/2015 @ 9:44:56AM - creating directory: ./assetts/assets/js
+03/30/2015 @ 9:44:56AM - copying ./templates/assets/js/Bandmaster.js to: ./assetts/assets/js/Bandmaster.js
+03/30/2015 @ 9:44:56AM - creating directory: ./assetts/assets/css
+03/30/2015 @ 9:44:56AM - copying ./templates/assets/css/style.css to: ./assetts/assets/css/style.css
+03/30/2015 @ 9:44:56AM - creating directory: ./assetts/assets/img
+03/30/2015 @ 9:44:56AM - copying images to: ./assetts/assets/img
+
+03/30/2015 @ 10:02:15AM - Creating account: dave5
+03/30/2015 @ 10:02:15AM - creating directory: ./dave5
+03/30/2015 @ 10:02:15AM - copying ./templates/index.html to: ./dave5/index.html
+03/30/2015 @ 10:02:15AM - copying ./templates/functions.php to: ./dave5/functions.php
+03/30/2015 @ 10:02:15AM - copying ./templates/upload.php to: ./dave5/upload.php
+03/30/2015 @ 10:02:15AM - creating directory: ./dave5/uploads
+03/30/2015 @ 10:02:15AM - creating directory: ./dave5/JSON
+03/30/2015 @ 10:02:15AM - copying ./templates/JSON/settings.json to: ./dave5/JSON/settings.json
+03/30/2015 @ 10:02:15AM - copying ./templates/JSON/songs.json to: ./dave5/JSON/songs.json
+03/30/2015 @ 10:02:15AM - copying ./templates/JSON/taskList.json to: ./dave5/JSON/taskList.json
+03/30/2015 @ 10:02:15AM - creating directory: ./dave5/assets
+03/30/2015 @ 10:02:15AM - creating directory: ./dave5/assets/js
+03/30/2015 @ 10:02:15AM - copying ./templates/assets/js/Bandmaster.js to: ./dave5/assets/js/Bandmaster.js
+03/30/2015 @ 10:02:15AM - creating directory: ./dave5/assets/css
+03/30/2015 @ 10:02:15AM - copying ./templates/assets/css/style.css to: ./dave5/assets/css/style.css
+03/30/2015 @ 10:02:15AM - creating directory: ./dave5/assets/img
+03/30/2015 @ 10:02:15AM - copying images to: ./dave5/assets/img
+
+03/30/2015 @ 10:04:18AM - Creating account: dave3
+03/30/2015 @ 10:04:18AM - creating directory: ./dave3
+03/30/2015 @ 10:04:18AM - copying ./templates/index.html to: ./dave3/index.html
+03/30/2015 @ 10:04:18AM - copying ./templates/functions.php to: ./dave3/functions.php
+03/30/2015 @ 10:04:18AM - copying ./templates/upload.php to: ./dave3/upload.php
+03/30/2015 @ 10:04:18AM - creating directory: ./dave3/uploads
+03/30/2015 @ 10:04:18AM - creating directory: ./dave3/JSON
+03/30/2015 @ 10:04:18AM - copying ./templates/JSON/settings.json to: ./dave3/JSON/settings.json
+03/30/2015 @ 10:04:18AM - copying ./templates/JSON/songs.json to: ./dave3/JSON/songs.json
+03/30/2015 @ 10:04:18AM - copying ./templates/JSON/taskList.json to: ./dave3/JSON/taskList.json
+03/30/2015 @ 10:04:18AM - creating directory: ./dave3/assets
+03/30/2015 @ 10:04:18AM - creating directory: ./dave3/assets/js
+03/30/2015 @ 10:04:18AM - copying ./templates/assets/js/Bandmaster.js to: ./dave3/assets/js/Bandmaster.js
+03/30/2015 @ 10:04:18AM - creating directory: ./dave3/assets/css
+03/30/2015 @ 10:04:18AM - copying ./templates/assets/css/style.css to: ./dave3/assets/css/style.css
+03/30/2015 @ 10:04:18AM - creating directory: ./dave3/assets/img
+03/30/2015 @ 10:04:18AM - copying images to: ./dave3/assets/img
+
+03/30/2015 @ 10:05:16AM - Creating account: dave7
+03/30/2015 @ 10:05:16AM - creating directory: ./dave7
+03/30/2015 @ 10:05:16AM - copying ./templates/index.html to: ./dave7/index.html
+03/30/2015 @ 10:05:16AM - copying ./templates/functions.php to: ./dave7/functions.php
+03/30/2015 @ 10:05:16AM - copying ./templates/upload.php to: ./dave7/upload.php
+03/30/2015 @ 10:05:16AM - creating directory: ./dave7/uploads
+03/30/2015 @ 10:05:16AM - creating directory: ./dave7/JSON
+03/30/2015 @ 10:05:16AM - copying ./templates/JSON/settings.json to: ./dave7/JSON/settings.json
+03/30/2015 @ 10:05:16AM - copying ./templates/JSON/songs.json to: ./dave7/JSON/songs.json
+03/30/2015 @ 10:05:16AM - copying ./templates/JSON/taskList.json to: ./dave7/JSON/taskList.json
+03/30/2015 @ 10:05:16AM - creating directory: ./dave7/assets
+03/30/2015 @ 10:05:16AM - creating directory: ./dave7/assets/js
+03/30/2015 @ 10:05:16AM - copying ./templates/assets/js/Bandmaster.js to: ./dave7/assets/js/Bandmaster.js
+03/30/2015 @ 10:05:16AM - creating directory: ./dave7/assets/css
+03/30/2015 @ 10:05:16AM - copying ./templates/assets/css/style.css to: ./dave7/assets/css/style.css
+03/30/2015 @ 10:05:16AM - creating directory: ./dave7/assets/img
+03/30/2015 @ 10:05:16AM - copying images to: ./dave7/assets/img
+
+03/30/2015 @ 10:05:45AM - Creating account: daadfa
+03/30/2015 @ 10:05:45AM - creating directory: ./daadfa
+03/30/2015 @ 10:05:45AM - copying ./templates/index.html to: ./daadfa/index.html
+03/30/2015 @ 10:05:45AM - copying ./templates/functions.php to: ./daadfa/functions.php
+03/30/2015 @ 10:05:45AM - copying ./templates/upload.php to: ./daadfa/upload.php
+03/30/2015 @ 10:05:45AM - creating directory: ./daadfa/uploads
+03/30/2015 @ 10:05:45AM - creating directory: ./daadfa/JSON
+03/30/2015 @ 10:05:45AM - copying ./templates/JSON/settings.json to: ./daadfa/JSON/settings.json
+03/30/2015 @ 10:05:45AM - copying ./templates/JSON/songs.json to: ./daadfa/JSON/songs.json
+03/30/2015 @ 10:05:45AM - copying ./templates/JSON/taskList.json to: ./daadfa/JSON/taskList.json
+03/30/2015 @ 10:05:45AM - creating directory: ./daadfa/assets
+03/30/2015 @ 10:05:45AM - creating directory: ./daadfa/assets/js
+03/30/2015 @ 10:05:45AM - copying ./templates/assets/js/Bandmaster.js to: ./daadfa/assets/js/Bandmaster.js
+03/30/2015 @ 10:05:45AM - creating directory: ./daadfa/assets/css
+03/30/2015 @ 10:05:45AM - copying ./templates/assets/css/style.css to: ./daadfa/assets/css/style.css
+03/30/2015 @ 10:05:45AM - creating directory: ./daadfa/assets/img
+03/30/2015 @ 10:05:45AM - copying images to: ./daadfa/assets/img
+
+03/30/2015 @ 10:11:09AM - Creating account: dafa
+03/30/2015 @ 10:11:09AM - creating directory: ./dafa
+03/30/2015 @ 10:11:09AM - copying ./templates/index.html to: ./dafa/index.html
+03/30/2015 @ 10:11:09AM - copying ./templates/functions.php to: ./dafa/functions.php
+03/30/2015 @ 10:11:09AM - copying ./templates/upload.php to: ./dafa/upload.php
+03/30/2015 @ 10:11:09AM - creating directory: ./dafa/uploads
+03/30/2015 @ 10:11:09AM - creating directory: ./dafa/JSON
+03/30/2015 @ 10:11:09AM - copying ./templates/JSON/settings.json to: ./dafa/JSON/settings.json
+03/30/2015 @ 10:11:09AM - copying ./templates/JSON/songs.json to: ./dafa/JSON/songs.json
+03/30/2015 @ 10:11:09AM - copying ./templates/JSON/taskList.json to: ./dafa/JSON/taskList.json
+03/30/2015 @ 10:11:09AM - creating directory: ./dafa/assets
+03/30/2015 @ 10:11:09AM - creating directory: ./dafa/assets/js
+03/30/2015 @ 10:11:09AM - copying ./templates/assets/js/Bandmaster.js to: ./dafa/assets/js/Bandmaster.js
+03/30/2015 @ 10:11:09AM - creating directory: ./dafa/assets/css
+03/30/2015 @ 10:11:09AM - copying ./templates/assets/css/style.css to: ./dafa/assets/css/style.css
+03/30/2015 @ 10:11:09AM - creating directory: ./dafa/assets/img
+03/30/2015 @ 10:11:09AM - copying images to: ./dafa/assets/img
+
+03/30/2015 @ 10:11:22AM - Creating account: afafaf
+03/30/2015 @ 10:11:22AM - creating directory: ./afafaf
+03/30/2015 @ 10:11:22AM - copying ./templates/index.html to: ./afafaf/index.html
+03/30/2015 @ 10:11:22AM - copying ./templates/functions.php to: ./afafaf/functions.php
+03/30/2015 @ 10:11:22AM - copying ./templates/upload.php to: ./afafaf/upload.php
+03/30/2015 @ 10:11:22AM - creating directory: ./afafaf/uploads
+03/30/2015 @ 10:11:22AM - creating directory: ./afafaf/JSON
+03/30/2015 @ 10:11:22AM - copying ./templates/JSON/settings.json to: ./afafaf/JSON/settings.json
+03/30/2015 @ 10:11:22AM - copying ./templates/JSON/songs.json to: ./afafaf/JSON/songs.json
+03/30/2015 @ 10:11:22AM - copying ./templates/JSON/taskList.json to: ./afafaf/JSON/taskList.json
+03/30/2015 @ 10:11:22AM - creating directory: ./afafaf/assets
+03/30/2015 @ 10:11:22AM - creating directory: ./afafaf/assets/js
+03/30/2015 @ 10:11:22AM - copying ./templates/assets/js/Bandmaster.js to: ./afafaf/assets/js/Bandmaster.js
+03/30/2015 @ 10:11:22AM - creating directory: ./afafaf/assets/css
+03/30/2015 @ 10:11:22AM - copying ./templates/assets/css/style.css to: ./afafaf/assets/css/style.css
+03/30/2015 @ 10:11:22AM - creating directory: ./afafaf/assets/img
+03/30/2015 @ 10:11:22AM - copying images to: ./afafaf/assets/img
+
+03/30/2015 @ 10:31:24AM - Creating account: abc
+03/30/2015 @ 10:31:24AM - creating directory: ./abc
+03/30/2015 @ 10:31:24AM - copying ./templates/index.html to: ./abc/index.html
+03/30/2015 @ 10:31:24AM - copying ./templates/functions.php to: ./abc/functions.php
+03/30/2015 @ 10:31:24AM - copying ./templates/upload.php to: ./abc/upload.php
+03/30/2015 @ 10:31:24AM - creating directory: ./abc/uploads
+03/30/2015 @ 10:31:24AM - creating directory: ./abc/JSON
+03/30/2015 @ 10:31:24AM - copying ./templates/JSON/settings.json to: ./abc/JSON/settings.json
+03/30/2015 @ 10:31:24AM - copying ./templates/JSON/songs.json to: ./abc/JSON/songs.json
+03/30/2015 @ 10:31:24AM - copying ./templates/JSON/taskList.json to: ./abc/JSON/taskList.json
+03/30/2015 @ 10:31:24AM - creating directory: ./abc/assets
+03/30/2015 @ 10:31:24AM - creating directory: ./abc/assets/js
+03/30/2015 @ 10:31:24AM - copying ./templates/assets/js/Bandmaster.js to: ./abc/assets/js/Bandmaster.js
+03/30/2015 @ 10:31:24AM - creating directory: ./abc/assets/css
+03/30/2015 @ 10:31:24AM - copying ./templates/assets/css/style.css to: ./abc/assets/css/style.css
+03/30/2015 @ 10:31:24AM - creating directory: ./abc/assets/img
+03/30/2015 @ 10:31:24AM - copying images to: ./abc/assets/img
+
+03/30/2015 @ 3:45:52PM - Creating account: dave4
+03/30/2015 @ 3:45:52PM - creating directory: ./dave4
+03/30/2015 @ 3:45:52PM - copying ./templates/index.html to: ./dave4/index.html
+03/30/2015 @ 3:45:52PM - copying ./templates/functions.php to: ./dave4/functions.php
+03/30/2015 @ 3:45:52PM - copying ./templates/upload.php to: ./dave4/upload.php
+03/30/2015 @ 3:45:52PM - creating directory: ./dave4/uploads
+03/30/2015 @ 3:45:52PM - creating directory: ./dave4/JSON
+03/30/2015 @ 3:45:52PM - copying ./templates/JSON/settings.json to: ./dave4/JSON/settings.json
+03/30/2015 @ 3:45:52PM - copying ./templates/JSON/songs.json to: ./dave4/JSON/songs.json
+03/30/2015 @ 3:45:52PM - copying ./templates/JSON/taskList.json to: ./dave4/JSON/taskList.json
+03/30/2015 @ 3:45:52PM - creating directory: ./dave4/assets
+03/30/2015 @ 3:45:52PM - creating directory: ./dave4/assets/js
+03/30/2015 @ 3:45:52PM - copying ./templates/assets/js/Bandmaster.js to: ./dave4/assets/js/Bandmaster.js
+03/30/2015 @ 3:45:52PM - creating directory: ./dave4/assets/css
+03/30/2015 @ 3:45:52PM - copying ./templates/assets/css/style.css to: ./dave4/assets/css/style.css
+03/30/2015 @ 3:45:52PM - creating directory: ./dave4/assets/img
+03/30/2015 @ 3:45:52PM - copying images to: ./dave4/assets/img
+
+03/30/2015 @ 4:07:57PM - Creating account: dave11
+03/30/2015 @ 4:07:57PM - creating directory: ./dave11
+03/30/2015 @ 4:07:57PM - copying ./templates/index.html to: ./dave11/index.html
+03/30/2015 @ 4:07:57PM - copying ./templates/functions.php to: ./dave11/functions.php
+03/30/2015 @ 4:07:57PM - copying ./templates/upload.php to: ./dave11/upload.php
+03/30/2015 @ 4:07:57PM - creating directory: ./dave11/uploads
+03/30/2015 @ 4:07:57PM - creating directory: ./dave11/JSON
+03/30/2015 @ 4:07:57PM - copying ./templates/JSON/settings.json to: ./dave11/JSON/settings.json
+03/30/2015 @ 4:07:57PM - copying ./templates/JSON/songs.json to: ./dave11/JSON/songs.json
+03/30/2015 @ 4:07:57PM - copying ./templates/JSON/taskList.json to: ./dave11/JSON/taskList.json
+03/30/2015 @ 4:07:57PM - creating directory: ./dave11/assets
+03/30/2015 @ 4:07:57PM - creating directory: ./dave11/assets/js
+03/30/2015 @ 4:07:57PM - copying ./templates/assets/js/Bandmaster.js to: ./dave11/assets/js/Bandmaster.js
+03/30/2015 @ 4:07:57PM - creating directory: ./dave11/assets/css
+03/30/2015 @ 4:07:57PM - copying ./templates/assets/css/style.css to: ./dave11/assets/css/style.css
+03/30/2015 @ 4:07:57PM - creating directory: ./dave11/assets/img
+03/30/2015 @ 4:07:57PM - copying images to: ./dave11/assets/img
+
+03/30/2015 @ 4:08:16PM - Creating account: dave12
+03/30/2015 @ 4:08:16PM - creating directory: ./dave12
+03/30/2015 @ 4:08:16PM - copying ./templates/index.html to: ./dave12/index.html
+03/30/2015 @ 4:08:16PM - copying ./templates/functions.php to: ./dave12/functions.php
+03/30/2015 @ 4:08:16PM - copying ./templates/upload.php to: ./dave12/upload.php
+03/30/2015 @ 4:08:16PM - creating directory: ./dave12/uploads
+03/30/2015 @ 4:08:16PM - creating directory: ./dave12/JSON
+03/30/2015 @ 4:08:16PM - copying ./templates/JSON/settings.json to: ./dave12/JSON/settings.json
+03/30/2015 @ 4:08:16PM - copying ./templates/JSON/songs.json to: ./dave12/JSON/songs.json
+03/30/2015 @ 4:08:16PM - copying ./templates/JSON/taskList.json to: ./dave12/JSON/taskList.json
+03/30/2015 @ 4:08:16PM - creating directory: ./dave12/assets
+03/30/2015 @ 4:08:16PM - creating directory: ./dave12/assets/js
+03/30/2015 @ 4:08:16PM - copying ./templates/assets/js/Bandmaster.js to: ./dave12/assets/js/Bandmaster.js
+03/30/2015 @ 4:08:16PM - creating directory: ./dave12/assets/css
+03/30/2015 @ 4:08:16PM - copying ./templates/assets/css/style.css to: ./dave12/assets/css/style.css
+03/30/2015 @ 4:08:16PM - creating directory: ./dave12/assets/img
+03/30/2015 @ 4:08:16PM - copying images to: ./dave12/assets/img
+
+03/30/2015 @ 4:11:03PM - Creating account: dave33
+03/30/2015 @ 4:11:03PM - creating directory: ./dave33
+03/30/2015 @ 4:11:03PM - copying ./templates/index.html to: ./dave33/index.html
+03/30/2015 @ 4:11:03PM - copying ./templates/functions.php to: ./dave33/functions.php
+03/30/2015 @ 4:11:03PM - copying ./templates/upload.php to: ./dave33/upload.php
+03/30/2015 @ 4:11:03PM - creating directory: ./dave33/uploads
+03/30/2015 @ 4:11:03PM - creating directory: ./dave33/JSON
+03/30/2015 @ 4:11:03PM - copying ./templates/JSON/settings.json to: ./dave33/JSON/settings.json
+03/30/2015 @ 4:11:03PM - copying ./templates/JSON/songs.json to: ./dave33/JSON/songs.json
+03/30/2015 @ 4:11:03PM - copying ./templates/JSON/taskList.json to: ./dave33/JSON/taskList.json
+03/30/2015 @ 4:11:03PM - creating directory: ./dave33/assets
+03/30/2015 @ 4:11:03PM - creating directory: ./dave33/assets/js
+03/30/2015 @ 4:11:03PM - copying ./templates/assets/js/Bandmaster.js to: ./dave33/assets/js/Bandmaster.js
+03/30/2015 @ 4:11:03PM - creating directory: ./dave33/assets/css
+03/30/2015 @ 4:11:03PM - copying ./templates/assets/css/style.css to: ./dave33/assets/css/style.css
+03/30/2015 @ 4:11:03PM - creating directory: ./dave33/assets/img
+03/30/2015 @ 4:11:03PM - copying images to: ./dave33/assets/img
+
+03/30/2015 @ 4:12:14PM - Creating account: dave3333
+03/30/2015 @ 4:12:14PM - creating directory: ./dave3333
+03/30/2015 @ 4:12:14PM - copying ./templates/index.html to: ./dave3333/index.html
+03/30/2015 @ 4:12:14PM - copying ./templates/functions.php to: ./dave3333/functions.php
+03/30/2015 @ 4:12:14PM - copying ./templates/upload.php to: ./dave3333/upload.php
+03/30/2015 @ 4:12:14PM - creating directory: ./dave3333/uploads
+03/30/2015 @ 4:12:14PM - creating directory: ./dave3333/JSON
+03/30/2015 @ 4:12:14PM - copying ./templates/JSON/settings.json to: ./dave3333/JSON/settings.json
+03/30/2015 @ 4:12:14PM - copying ./templates/JSON/songs.json to: ./dave3333/JSON/songs.json
+03/30/2015 @ 4:12:14PM - copying ./templates/JSON/taskList.json to: ./dave3333/JSON/taskList.json
+03/30/2015 @ 4:12:14PM - creating directory: ./dave3333/assets
+03/30/2015 @ 4:12:14PM - creating directory: ./dave3333/assets/js
+03/30/2015 @ 4:12:14PM - copying ./templates/assets/js/Bandmaster.js to: ./dave3333/assets/js/Bandmaster.js
+03/30/2015 @ 4:12:14PM - creating directory: ./dave3333/assets/css
+03/30/2015 @ 4:12:14PM - copying ./templates/assets/css/style.css to: ./dave3333/assets/css/style.css
+03/30/2015 @ 4:12:14PM - creating directory: ./dave3333/assets/img
+03/30/2015 @ 4:12:14PM - copying images to: ./dave3333/assets/img
+
+03/30/2015 @ 4:12:52PM - Creating account: 1212312312
+03/30/2015 @ 4:12:52PM - creating directory: ./1212312312
+03/30/2015 @ 4:12:52PM - copying ./templates/index.html to: ./1212312312/index.html
+03/30/2015 @ 4:12:52PM - copying ./templates/functions.php to: ./1212312312/functions.php
+03/30/2015 @ 4:12:52PM - copying ./templates/upload.php to: ./1212312312/upload.php
+03/30/2015 @ 4:12:52PM - creating directory: ./1212312312/uploads
+03/30/2015 @ 4:12:52PM - creating directory: ./1212312312/JSON
+03/30/2015 @ 4:12:52PM - copying ./templates/JSON/settings.json to: ./1212312312/JSON/settings.json
+03/30/2015 @ 4:12:52PM - copying ./templates/JSON/songs.json to: ./1212312312/JSON/songs.json
+03/30/2015 @ 4:12:52PM - copying ./templates/JSON/taskList.json to: ./1212312312/JSON/taskList.json
+03/30/2015 @ 4:12:52PM - creating directory: ./1212312312/assets
+03/30/2015 @ 4:12:52PM - creating directory: ./1212312312/assets/js
+03/30/2015 @ 4:12:52PM - copying ./templates/assets/js/Bandmaster.js to: ./1212312312/assets/js/Bandmaster.js
+03/30/2015 @ 4:12:52PM - creating directory: ./1212312312/assets/css
+03/30/2015 @ 4:12:52PM - copying ./templates/assets/css/style.css to: ./1212312312/assets/css/style.css
+03/30/2015 @ 4:12:52PM - creating directory: ./1212312312/assets/img
+03/30/2015 @ 4:12:52PM - copying images to: ./1212312312/assets/img

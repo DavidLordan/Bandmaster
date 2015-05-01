@@ -19,16 +19,16 @@
 
       // if the file is a song
       if ($_POST['fileType'] == "song") {
-        if (move_uploaded_file($_FILES['upl']['tmp_name'], 'uploads/' . $_FILES['upl']['name'])) {
+        if (move_uploaded_file($_FILES['upl']['tmp_name'], 'uploads/' . stripslashes($_FILES['upl']['name']))) {
           $file = file_get_contents('JSON/songs.json', true);
           $data = json_decode($file, true);
           unset($file);
           date_default_timezone_set('America/New_York');
           $log = fopen("file_log.txt", "a");
-          fwrite($log, "\n" . date("m/d/Y @ g:i:sA") . " - File Uploaded: " . 'uploads/' . $_FILES['upl']['name']);
+          fwrite($log, "\n" . date("m/d/Y @ g:i:sA") . " - Song Uploaded: " . 'uploads/' . $_FILES['upl']['name']);
           fclose($log);
 
-          $basename = pathinfo($_FILES['upl']['name'], PATHINFO_BASENAME);
+          $basename = pathinfo(stripslashes($_FILES['upl']['name']), PATHINFO_BASENAME);
           //$data[0]["name"] = $basename;
 
           $data[] = array('name' => $basename);
@@ -50,21 +50,24 @@
           unset($file);
 
           // song to append the file to
-          $songname = $_POST['songname'];
-          $filetype = $_POST['fileType'];
+          $songname = stripSlashes($_POST['songname']);
           $filename = pathinfo($_FILES['upl']['name'], PATHINFO_BASENAME);
-
+          $found = false;
           $max = sizeof($data);
           // find the song to attach this file to
           for ($i = 0; $i < $max; $i++) {
             if ($data[$i]['name'] == $songname) {
-              // if the file already exists, delete the old one
-              if (isset($data[$i][$filetype]) == true) {
-                $fileToRemove = 'uploads/' . $data[$i][$filetype];
-                unlink($fileToRemove);
+              // add the file to the song
+              for ($j = 0; $j < sizeof($data[$i]['documents']); $j++) {
+                // remove old copies if this is a reupload
+                if ($data[$i]['documents'][$j] == $filename) {
+                  $found = true;
+                  break;
+                }
               }
-
-              $data[$i][$filetype] = $filename;   
+              if ($found != true) {
+                $data[$i]['documents'][] = $filename;
+              }
               break;
             }
           }

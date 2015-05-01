@@ -1,6 +1,6 @@
 <?php
 
-  set_include_path('ChromePHP.php');
+
   date_default_timezone_set('America/New_York');
 
   if ($_POST['func'] == "deleteFile") {
@@ -14,22 +14,15 @@
       // get the associated files and delete them first
       $removal = array_splice($data, $_POST['index'], 1);
 
-      if (isset($removal[0]['lyrics'])) {
-        $fileToRemove = 'uploads/' . $removal[0]['lyrics'];
-        unlink($fileToRemove);
-        fwrite($log, "\n" . date("m/d/Y @ g:i:sA") . " - File Deleted: uploads/" . $removal[0]['lyrics']);
+      if (isset($removal[0]['documents'])) {
+        $size = sizeof($removal[0]['documents']);
+        for ($i = 0; $i < $size; $i++) {
+          $fileToRemove = 'uploads/' . $removal[0]['documents'][$i];
+          unlink($fileToRemove);
+          fwrite($log, "\n" . date("m/d/Y @ g:i:sA") . " - File Deleted: uploads/" . $removal[0]['documents'][$i]);
+        }
       }
-      if (isset($removal[0]['sheet'])) {
-        $fileToRemove = 'uploads/' . $removal[0]['sheet'];
-        unlink($fileToRemove);
-        fwrite($log, "\n" . date("m/d/Y @ g:i:sA") . " - File Deleted: uploads/" . $removal[0]['sheet']);
-      }
-      if (isset($removal[0]['tabs'])) {
-        $fileToRemove = 'uploads/' . $removal[0]['tabs'];
-        unlink($fileToRemove);
-        fwrite($log, "\n" . date("m/d/Y @ g:i:sA") . " - File Deleted: uploads/" . $removal[0]['tabs']);
-      }
-
+      
       // remove the entry from json
       $result = json_encode($data);
       file_put_contents('JSON/songs.json', $result);
@@ -52,7 +45,7 @@
       $data = json_decode($file, true);
       unset($file);
 
-      $newTask = $_POST['newTask'];
+      $newTask = stripslashes($_POST['newTask']);
       $data[] = array('task' => $newTask);
 
       $result = json_encode($data);
@@ -91,7 +84,7 @@
       $data = json_decode($file, true);
       unset($file);
 
-      $name = $_POST['name'];
+      $name = stripslashes($_POST['name']);
       $data['bandname'] = $name;
       $result = json_encode($data);
       file_put_contents('JSON/settings.json', $result);
